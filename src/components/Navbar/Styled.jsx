@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const NavbarStyled = styled.section`
+export const NavbarStyled = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,6 +10,7 @@ const NavbarStyled = styled.section`
   position: fixed;
   top: 0;
   padding: 0rem 10rem;
+  background: #fff;
 
   @media screen and (max-width: 1200px) {
     padding: 1rem 8rem;
@@ -49,13 +50,66 @@ const NavbarStyled = styled.section`
   }
 
   .menu-icon {
-      
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      position: relative;
+
+      div {
+        display: ${({ isOpen }) => (isOpen ? "none" : "flex")};
+        width: 80%;
+        height: 3px;
+        background: var(--primary);
+      }
+    }
+  }
+
+  .menu-icon::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background: var(--primary);
+    transition: 0.2s;
+    transform: ${({ isOpen }) =>
+      isOpen ? "translateY(0px) rotate(45deg)" : "translateY(-10px)"};
+  }
+
+  .menu-icon::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background: var(--primary);
+    transition: 0.2s;
+    transform: ${({ isOpen }) =>
+      isOpen ? "translateY(0px) rotate(-45deg)" : "translateY(10px)"};
   }
 
   .scrollspy {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .current::before {
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: var(--secondary);
+    transition: .2s ease-in-out;
   }
 
   .menu-link {
@@ -63,21 +117,19 @@ const NavbarStyled = styled.section`
     justify-content: center;
     align-items: center;
     margin-right: 15px;
+    padding: 10px 15px;
     font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;
     cursor: pointer;
+    position: relative;
 
     a {
-      color: red;
+      color: #000;
     }
   }
 
-  p {
-    color: var(--secondary);
-    font-size: 40px;
-    font-weight: 500;
+  .menu-link:last-child {
+    margin-right: 0;
   }
 `;
-
-export default NavbarStyled;
