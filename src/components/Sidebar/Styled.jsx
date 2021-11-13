@@ -34,6 +34,38 @@ export const SidebarStyled = styled.section`
     align-items: center;
   }
 
+  .menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 15px 10px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .menu-link a {
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  .menu-link a:hover {
+    color: var(--secondary);
+  }
+
+  .menu-link:last-child {
+    margin-bottom: 0;
+  }
+
+  .current a {
+    color: var(--secondary);
+    font-weight: 600;
+  }
+
   .current::before {
     content: "";
     height: 3px;
@@ -42,28 +74,5 @@ export const SidebarStyled = styled.section`
     bottom: 0;
     background: var(--secondary);
     transition: 0.2s ease-in-out;
-  }
-
-  .menu-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    font-size: 16px;
-    font-weight: 500;
-    text-transform: capitalize;
-    width: 100%;
-    cursor: pointer;
-    padding: 15px 10px;
-    margin-bottom: 20px;
-    position: relative;
-
-    a {
-      color: #000;
-    }
-  }
-
-  .menu-link:last-child {
-    margin-bottom: 0;
   }
 `;

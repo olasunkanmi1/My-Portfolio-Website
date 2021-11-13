@@ -102,34 +102,43 @@ export const NavbarStyled = styled.section`
     }
   }
 
-  .current::before {
-    content: "";
-    height: 3px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background: var(--secondary);
-    transition: .2s ease-in-out;
-  }
-
   .menu-link {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 15px;
     padding: 10px 15px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .menu-link a {
+    transition: 0.3s;
     font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;
-    cursor: pointer;
-    position: relative;
+  }
 
-    a {
-      color: #000;
-    }
+  .menu-link a:hover {
+    color: var(--secondary);
   }
 
   .menu-link:last-child {
     margin-right: 0;
+  }
+  
+  .current a {
+    color: var(--secondary);
+    font-weight: 600;
+  }
+
+  .current::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: var(--secondary);
+    /* transition: 0.2s ease-in-out; */
   }
 `;

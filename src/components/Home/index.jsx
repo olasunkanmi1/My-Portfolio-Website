@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { HomeStyled } from "./Styled"
 
 const Home = () => {
     return (
-        <div id="home" style={{height: "100vh"}}>
+        <HomeStyled id="home">
             
-        </div>
+        </HomeStyled>
     )
 }
 
