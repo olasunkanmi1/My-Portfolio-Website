@@ -106,6 +106,7 @@ export const NavbarStyled = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
     margin-right: 15px;
     padding: 10px 15px;
     cursor: pointer;
