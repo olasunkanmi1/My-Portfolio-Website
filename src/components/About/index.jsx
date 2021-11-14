@@ -1,10 +1,11 @@
 import React from 'react'
+import { AboutStyled } from "./Styled"
 
-const About = () => {
+const About = ({ toggle }) => {
     return (
-        <div id="about" style={{height: "100vh"}}>
-            
-        </div>
+        <AboutStyled id="about" className={ toggle === 2 ? 'content active-content' : 'content'}>
+            About
+        </AboutStyled>
     )
 }
 

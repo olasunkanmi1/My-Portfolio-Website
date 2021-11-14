@@ -1,27 +1,29 @@
 import styled from "styled-components";
-import { ReactComponent as Chevron } from '../../assets/icons/chevron.svg'
 
 export const PortfolioStyled = styled.section`
     display: flex;
     flex-direction: column;
     padding: 2rem 10rem;
+    background: #eee;
 
-    .card-wrapper {
+    .wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: .8fr .2fr;
         grid-gap: 30px;
+        margin-bottom: 30px;
 
         .card {
             display: flex;
             flex-direction: column;
             padding: 10px;
-            border: 1px solid var(--secondary);
-            /* background: #eee; */
+            background: #fff;
+            /* border: 1px solid var(--secondary); */
+            box-shadow: 0 0 10px 5px var(--primary);
             overflow: hidden;
 
             .thumbnail {
                 width: 100%;
-                height: 50px;
+                height: 200px;
             }
 
             .about {
@@ -36,17 +38,26 @@ export const PortfolioStyled = styled.section`
                     text-transform: capitalize;
                     cursor: pointer;
 
-                    .svg {
-                        /* background: green; */
+                    .up {
                         transition: .2s;
-                        transform: ${({showDescription}) => showDescription ? "rotate(180deg)" : "rotate(0deg)"};
+                        transform: rotate(180deg);
+                    }
+                    
+                    .down {
+                        transition: .2s;
+                        transform: rotate(0deg);
                     }
                 }
 
                 .description {
-                    display: ${({showDescription}) => (showDescription ? "flex" : "none" )};
+                    transition: 1s ease-in-out;
                 }
             }
+        }
+
+        .tools {
+            display: flex;
+            flex-direction: clumn;
         }
     }
 `

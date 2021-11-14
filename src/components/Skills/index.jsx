@@ -1,11 +1,25 @@
-import React from 'react'
+import React from "react";
+import { SkillsStyled } from "./Styled";
+import { SkillsData } from "../../data/SkillsData";
 
-const Skills = () => {
-    return (
-        <div id="skills" style={{height: "100vh"}}>
-            
-        </div>
-    )
-}
+const Skills = ({ toggle }) => {
+  return (
+    <SkillsStyled
+      id="skills"
+      className={toggle === 3 ? "content active-content" : "content"}
+    >
+      <h1>My Relevant Skills</h1>
 
-export default Skills
+      <div className="wrap">
+          {SkillsData.map((skill) => (
+              <div className="skill">
+                {skill.svg}
+                <h4>{skill.name}</h4>
+              </div>
+          ))}
+      </div>
+    </SkillsStyled>
+  );
+};
+
+export default Skills;

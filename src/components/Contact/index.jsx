@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Contact = () => {
+const Contact = ({ toggle }) => {
     return (
-        <div id="contact" style={{height: "100vh"}}>
-            
+        <div id="contact" className={ toggle === 5 ? 'content active-content' : 'content'}>
+            Contact
         </div>
     )
 }
