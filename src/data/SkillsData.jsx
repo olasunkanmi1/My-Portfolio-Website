@@ -4,7 +4,7 @@ import { ReactComponent as Js } from ".././assets/icons/js.svg";
 import { ReactComponent as React } from ".././assets/icons/react.svg";
 import { ReactComponent as Bootstrap } from ".././assets/icons/bootstrap.svg";
 import { ReactComponent as Scss } from ".././assets/icons/scss.svg";
-import { ReactComponent as Mui } from ".././assets/icons/git.svg";
+import { ReactComponent as Mui } from ".././assets/icons/mui.svg";
 import { ReactComponent as Git } from ".././assets/icons/git.svg";
 
 export const SkillsData = [

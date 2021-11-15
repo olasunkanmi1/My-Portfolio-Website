@@ -1,19 +1,21 @@
 import styled from "styled-components";
 
 export const SkillsStyled = styled.section`
-
-.wrap {
-  display: flex;
-
-  .skill {
+  .wrap {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
 
-    svg {
-      width: 100px;
-      height: 100px;
+    .skill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 50px 50px 0 0;
+
+      svg {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 15px;
+      }
     }
   }
-}
 `;

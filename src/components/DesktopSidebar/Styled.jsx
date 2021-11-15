@@ -6,9 +6,14 @@ export const SidebarStyled = styled.section`
   padding: 10px;
   height: 100%;
   width: 120px;
-  background: #fff;
   border-radius: 5px;
-  margin-right: 30px;
+  margin-right: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 
   .logo {
     width: 100%;
@@ -32,12 +37,12 @@ export const SidebarStyled = styled.section`
       cursor: pointer;
       font-size: 16px;
       font-weight: 500;
-      transition: .3s ease-in-out;
+      transition: 0.3s ease-in-out;
       text-transform: capitalize;
       position: relative;
 
       :hover {
-          color: var(--secondary);
+        color: var(--secondary);
       }
     }
 
