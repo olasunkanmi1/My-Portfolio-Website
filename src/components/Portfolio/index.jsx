@@ -8,7 +8,7 @@ const Portfolio = ({ toggle }) => {
 
   return (
     <PortfolioStyled id="portfolio" className={ toggle === 4 ? 'content active-content' : 'content'}>
-      <h2>Portfolio</h2>
+      <h2>Some of my projects</h2>
 
         {projects.map((project) => (
           <ProjectCard key={project.name} {...project} />
