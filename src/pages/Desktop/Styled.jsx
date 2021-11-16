@@ -16,6 +16,34 @@ export const DesktopStyled = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
 
+  @media screen and (max-width: 1200px) {
+    padding: 4rem 8rem;
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding: 4rem 7rem;
+  }
+
+  @media screen and (max-width: 920px) {
+    padding: 4rem 6rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 4rem 5rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 4rem 4rem;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 1rem 3rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 1rem 2rem;
+  }
+
   :before {
     position: absolute;
     content: "";

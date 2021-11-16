@@ -27,11 +27,18 @@ const Home = ({ toggle }) => {
         Hello 👋🏽, I'm an Enthusiastic Frontend Developer who is passionate about
         bringing ideas to live in the browser.
       </p>
-      <a href="/" className="btn">
-        Hire Me
-      </a>
-      <div className="img">
-        <img src={me} alt="display picture" />
+
+      <div className="wrap">
+        <div className="animation">
+          <div class="line line-left"></div>
+          <a href="mailto:olasunkanmiaq@gmail.com" className="btn" target="_blank">
+            Hire Me
+          </a>
+          <div class="line line-right"></div>
+        </div>
+        <div className="img">
+          <img src={me} alt="display picture" />
+        </div>
       </div>
     </HomeStyled>
   );

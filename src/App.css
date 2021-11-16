@@ -23,7 +23,7 @@ h1 {
 .underline {
   width: 3rem;
   height: 3px;
-  background-color: midnightblue;
+  background-color: var(--primary);
   margin-bottom: 3rem;
 }
 

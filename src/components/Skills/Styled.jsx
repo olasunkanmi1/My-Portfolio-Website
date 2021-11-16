@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const SkillsStyled = styled.section`
+  h1 {
+    font-size: 30px;
+  }
+
   .wrap {
     display: flex;
     flex-wrap: wrap;
