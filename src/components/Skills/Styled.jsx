@@ -8,6 +8,7 @@ export const SkillsStyled = styled.section`
   .wrap {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     .skill {
       display: flex;
