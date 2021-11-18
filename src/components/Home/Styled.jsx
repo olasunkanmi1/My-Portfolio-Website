@@ -42,107 +42,6 @@ export const HomeStyled = styled.section`
     }
   }
 
-  p {
-    font-size: 20px;
-    font-weight: 500;
-  }
-
-  .animation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(100% - 300px);
-
-    .line {
-      width: 100%;
-      max-width: 8.4rem;
-      height: 0.25rem;
-      background-color: var(--secondary);
-      position: relative;
-      opacity: 0;
-      -webkit-animation: grow 7s forwards;
-      -moz-animation: grow 7s forwards;
-      animation: grow 7s forwards;
-      /* animation-delay: 0.5s; */
-      transition: 3s ease-in-out;
-    }
-
-    .line-right::before, .line-right::after,
-    .line-left::before, .line-left::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      border: 0.5rem solid transparent;
-      opacity: 1;
-      animation: grow 0.5s forwards;
-    }
-
-    .line-right::before {
-      border-right-color: var(--secondary);
-      right: 0;
-    }
-
-    .line-left::before {
-      border-left-color: var(--secondary);
-      left: 0;
-    }
-    
-    .line-right::after {
-      border-left-color: var(--secondary);
-      right: -10px;
-    }
-
-    .line-left::after {
-      border-right-color: var(--secondary);
-      left: -10px;
-    }
-
-    @keyframes grow {
-      0% {
-        width: 0;
-      }
-      100% {
-        opacity: 1;
-        width: 100%;
-      }
-    }
-
-    @-webkit-keyframes grow {
-      0% {
-        width: 0;
-      }
-      100% {
-        opacity: 1;
-        width: 100%;
-      }
-    }
-
-    @-moz-keyframes grow {
-      0% {
-        width: 0;
-      }
-      100% {
-        opacity: 1;
-        width: 100%;
-      }
-    }
-  }
-
-  .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 15px;
-    background: var(--primary);
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    width: 150px;
-    border-radius: 3px;
-    margin: 0 15px;
-  }
-
   .img {
     display: flex;
     justify-content: center;
@@ -168,5 +67,120 @@ export const HomeStyled = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 500px;
+
+      p {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 25px;
+      }
+
+      .animation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .line {
+          width: 100%;
+          max-width: 8.4rem;
+          height: 3px;
+          background-color: var(--secondary);
+          position: relative;
+          -webkit-animation: grow 8s forwards;
+          -moz-animation: grow 8s forwards;
+          animation: grow 8s forwards;
+          /* animation-delay: 0.5s; */
+        }
+
+        /* .line-right::before,
+        .line-right::after,
+        .line-left::before,
+        .line-left::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          border: 0.5rem solid transparent;
+          opacity: 1;
+          animation: grow 2s forwards;
+        } */
+
+        .line-right::before {
+          border-right-color: var(--secondary);
+          right: 0;
+        }
+
+        .line-left::before {
+          border-left-color: var(--secondary);
+          left: 0;
+        }
+
+        .line-right::after {
+          border-left-color: var(--secondary);
+          right: -10px;
+        }
+
+        .line-left::after {
+          border-right-color: var(--secondary);
+          left: -10px;
+        }
+
+        @keyframes grow {
+          0% {
+            width: 0;
+          }
+          100% {
+            opacity: 1;
+            max-width: 8.4rem;
+          }
+        }
+
+        @-webkit-keyframes grow {
+          0% {
+            width: 0;
+          }
+          100% {
+            opacity: 1;
+            max-width: 8.4rem;
+          }
+        }
+
+        @-moz-keyframes grow {
+          0% {
+            width: 0;
+          }
+          100% {
+            opacity: 1;
+            max-width: 8.4rem;
+          }
+        }
+      }
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 15px;
+        background: var(--primary);
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        width: 150px;
+        border-radius: 3px;
+        margin: 0 15px;
+        transition: .3s ease-in-out;
+
+        :hover {
+          transform: scale(.98);
+        }
+      }
+    }
   }
 `;

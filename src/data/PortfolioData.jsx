@@ -72,7 +72,7 @@ export const portfolioData = [
     description:
       "My portfolio website showcasing my relevant skills and projects.",
     link: "https://olasunkanmi.netlify.app/",
-    tools: ["React", "Styled-components"],
+    tools: ["React", "Styled-components", "Formik"],
     column: "1/2",
     fade: "fade-left"
   },

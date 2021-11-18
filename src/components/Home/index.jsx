@@ -21,25 +21,29 @@ const Home = ({ toggle }) => {
       className={toggle === 1 ? "content active-content" : "content"}
     >
       <h1>Olasunkanmi Abdulsalam</h1>
-      <div className="typing"ref={textRef} />
-      <p>
-        Hello 👋🏽, I'm an Enthusiastic Frontend Developer who is passionate about
-        bringing ideas to live in the browser.
-      </p>
+      <div className="typing" ref={textRef} />
 
       <div className="wrap">
-        <div className="animation">
-          <div class="line line-left"></div>
-          <a
-            href="mailto:olasunkanmiaq@gmail.com"
-            className="btn"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Hire Me
-          </a>
-          <div class="line line-right"></div>
+        <div className="info">
+          <p>
+            Hello 👋🏽, I'm an Enthusiastic Frontend Developer who is passionate
+            about bringing ideas to live in the browser.
+          </p>
+
+          <div className="animation">
+            <div class="line line-left"></div>
+            <a
+              href="mailto:olasunkanmiaq@gmail.com"
+              className="btn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Hire Me
+            </a>
+            <div class="line line-right"></div>
+          </div>
         </div>
+
         <div className="img">
           <img src={me} alt="DP" />
         </div>
