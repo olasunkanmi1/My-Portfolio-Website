@@ -43,7 +43,7 @@ export const portfolioData = [
       "Real estate agency website where users can see properties available for sale and for rent in Lagos.",
     link: "https://propertyfinder.netlify.app/",
     tools: ["React", "Axios", "Styled-components", "Redux"],
-    column: "1/2",
+    column: "2/3",
     fade: "fade-right"
   },
   {
@@ -53,7 +53,7 @@ export const portfolioData = [
       "Landing pages for a FinTech website that help people invest, save, make payments and take loans.",
     link: "https://cashalat.netlify.app/",
     tools: ["React", "Styled-components"],
-    column: "2/3",
+    column: "1/2",
     fade: "fade-left"
   },
   {
@@ -63,7 +63,7 @@ export const portfolioData = [
       "A simple coding challenge. Allow users to search for people github username and automatically generate the profile picture and link to the profile.",
     link: "https://github-usernamesearch.netlify.app/",
     tools: ["HTML", "CSS", "Vanilla JS"],
-    column: "1/2",
+    column: "2/3",
     fade: "fade-right"
   },
   {
@@ -73,7 +73,7 @@ export const portfolioData = [
       "My portfolio website showcasing my relevant skills and projects.",
     link: "https://olasunkanmi.netlify.app/",
     tools: ["React", "Styled-components"],
-    column: "2/3",
+    column: "1/2",
     fade: "fade-left"
   },
   {

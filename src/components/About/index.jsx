@@ -21,8 +21,8 @@ const About = ({ toggle }) => {
             <p>Additionally, as a highly motivated individual, I feel confident that my skills set and dedication will enable me to become a valuable asset to your project or organization.</p>
 
             <div className="buttons">
-                <a href="mailto:olasunkanmiaq@gmail.com" className="btn mail" target="_blank">Get in touch</a>
-                <a href="https://drive.google.com/file/d/1uljD4lDOPelv9I_2UYcT_2z6sfeBj0pU/view?usp=sharing" className="btn cv" target="_blank">View Resume</a>
+                <a href="mailto:olasunkanmiaq@gmail.com" className="btn mail" target="_blank" rel="noreferrer">Get in touch</a>
+                <a href="https://drive.google.com/file/d/1uljD4lDOPelv9I_2UYcT_2z6sfeBj0pU/view?usp=sharing" className="btn cv" target="_blank" rel="noreferrer">View Resume</a>
             </div>
         </AboutStyled>
     )

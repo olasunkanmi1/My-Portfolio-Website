@@ -37,7 +37,7 @@ const ProjectCard = ({ thumbnail, name, description, column, link, tools, fade }
           {showDescription && (
             <div className="description" showDescription={showDescription}>
               <p>{description}</p>
-              <a href={link} target="_blank">
+              <a href={link} target="_blank" rel="noreferrer">
                 URL <Link />
               </a>
             </div>

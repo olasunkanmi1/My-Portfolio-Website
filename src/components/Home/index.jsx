@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import { HomeStyled } from "./Styled";
 import me from "../../assets/me.jpeg";
 import { init } from "ityped";
-
 const Home = ({ toggle }) => {
   const textRef = useRef();
 
@@ -22,7 +21,7 @@ const Home = ({ toggle }) => {
       className={toggle === 1 ? "content active-content" : "content"}
     >
       <h1>Olasunkanmi Abdulsalam</h1>
-      <h2 ref={textRef}></h2>
+      <div className="typing"ref={textRef} />
       <p>
         Hello 👋🏽, I'm an Enthusiastic Frontend Developer who is passionate about
         bringing ideas to live in the browser.
@@ -31,13 +30,18 @@ const Home = ({ toggle }) => {
       <div className="wrap">
         <div className="animation">
           <div class="line line-left"></div>
-          <a href="mailto:olasunkanmiaq@gmail.com" className="btn" target="_blank">
+          <a
+            href="mailto:olasunkanmiaq@gmail.com"
+            className="btn"
+            target="_blank"
+            rel="noreferrer"
+          >
             Hire Me
           </a>
           <div class="line line-right"></div>
         </div>
         <div className="img">
-          <img src={me} alt="display picture" />
+          <img src={me} alt="DP" />
         </div>
       </div>
     </HomeStyled>

@@ -7,13 +7,12 @@ export const HomeStyled = styled.section`
     line-height: 50px;
   }
 
-  h2 {
+  .typing {
     display: flex;
-    flex-wrap: nowrap;
     font-size: 30px;
+    font-weight: 600;
     height: 50px;
     color: var(--secondary);
-    width: fit-content;
   }
 
   .ityped-cursor {

@@ -10,6 +10,7 @@ export const PortfolioStyled = styled.section`
     display: grid;
     grid-template-columns: 0.6fr 0.4fr;
     grid-gap: 30px;
+    place-items: center;
     margin: 2rem 0;
 
     :nth-child(odd) {
@@ -23,6 +24,7 @@ export const PortfolioStyled = styled.section`
       background: #fff;
       box-shadow: 0 0 10px 5px var(--primary);
       overflow: hidden;
+      width: 100%;
 
       .thumbnail {
         width: 100%;
@@ -83,10 +85,11 @@ export const PortfolioStyled = styled.section`
     .tools {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
 
       div {
         font-size: 14px;
-        margin-right: 10px;
+        margin: 0 10px 10px 0;
         color: #fff;
         padding: 10px;
 
