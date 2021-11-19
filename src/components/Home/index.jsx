@@ -44,8 +44,10 @@ const Home = ({ toggle }) => {
           </div>
         </div>
 
-        <div className="img">
-          <img src={me} alt="DP" />
+        <div className="image-container">
+          <div className="img">
+            <img src={me} alt="DP" />
+          </div>
         </div>
       </div>
     </HomeStyled>

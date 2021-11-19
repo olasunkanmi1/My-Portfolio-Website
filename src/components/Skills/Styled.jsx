@@ -14,7 +14,8 @@ export const SkillsStyled = styled.section`
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 50px 50px 0 0;
+      margin-top: 50px;
+      padding: 25px;
 
       svg {
         width: 100px;

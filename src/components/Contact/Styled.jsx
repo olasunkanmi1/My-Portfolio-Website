@@ -17,11 +17,12 @@ export const ContactStyled = styled.section`
     form {
       display: flex;
       flex-direction: column;
+      align-items: flex-end;
       width: 350px;
-      justify-content: flex-end;
 
       div {
         margin-bottom: 10px;
+        width: 100%;
 
         input,
         textarea {
@@ -62,6 +63,7 @@ export const ContactStyled = styled.section`
         border: none;
         background: none;
         width: 100px;
+        border-radius: 3px;
         color: var(--primary);
 
         :hover {
@@ -76,6 +78,10 @@ export const ContactStyled = styled.section`
       flex-direction: column;
       align-items: center;
 
+      h4 {
+        margin-bottom: 10px;
+      }
+
       a {
         width: 35px;
         height: 35px;
@@ -87,5 +93,24 @@ export const ContactStyled = styled.section`
         }
       }
     }
+
+    @media screen and (max-width: 1100px) {
+      flex-direction: column;
+
+      form {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .links {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        h4, a {
+          margin-right: 15px;
+        }
+      }
+    }
   }
+
 `;

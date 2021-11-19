@@ -61,4 +61,8 @@ export const SidebarStyled = styled.section`
       background: var(--secondary);
     }
   }
+
+  @media screen and (max-width: 840px) {
+    margin-right: 20px;
+  }
 `;

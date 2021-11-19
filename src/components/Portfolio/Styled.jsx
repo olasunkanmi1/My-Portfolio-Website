@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const PortfolioStyled = styled.section`
   display: flex;
   flex-direction: column;
-  padding: 2rem 10rem;
-  background: #eee;
 
   .wrapper {
     display: grid;
@@ -63,19 +61,36 @@ export const PortfolioStyled = styled.section`
             margin-bottom: 10px;
           }
 
+          .tools-visible {
+            display: none;
+
+            @media screen and (max-width: 955px) {
+              display: flex;
+            }
+          }
+
           a {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 10px 15px;
-            background: var(--primary);
+            outline: 2px solid var(--primary);
+            color: var(--primary);
             border-radius: 5px;
-            color: #fff;
+            color: var(--primary);
+            font-weight: 600;
+            transition: 0.5s ease-in-out;
 
             svg {
               width: 20px;
               height: 20px;
               margin-left: 10px;
+            }
+
+            :hover {
+              background: var(--primary);
+              outline: none;
+              color: #fff;
             }
           }
         }
@@ -100,6 +115,51 @@ export const PortfolioStyled = styled.section`
         :nth-child(even) {
           background: var(--primary);
         }
+      }
+    }
+
+    @media screen and (max-width: 1100px) {
+      grid-gap: 15px;
+      grid-template-columns: 0.7fr 0.3fr;
+
+      :nth-child(odd) {
+        grid-template-columns: 0.3fr 0.7fr;
+      }
+
+      .tools div {
+        font-size: 12px;
+        padding: 5px;
+        /* margin: 0 0 10px 0; */
+      }
+    }
+
+    @media screen and (max-width: 955px) {
+      display: flex;
+
+      .card {
+
+        .tools-visible {
+          flex-wrap: wrap;
+
+          div {
+            font-size: 12px;
+            margin: 0 10px 10px 0;
+            color: #fff;
+            padding: 7px;
+
+            :nth-child(odd) {
+              background: var(--secondary);
+            }
+
+            :nth-child(even) {
+              background: var(--primary);
+            }
+          }
+        }
+      }
+
+      .tools {
+        display: none;
       }
     }
   }

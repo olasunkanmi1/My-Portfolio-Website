@@ -4,20 +4,28 @@ import { ReactComponent as Link } from "../../assets/icons/link.svg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const ProjectCard = ({ thumbnail, name, description, column, link, tools, fade }) => {
+const ProjectCard = ({
+  thumbnail,
+  name,
+  description,
+  column,
+  link,
+  tools,
+  fade,
+}) => {
   const [showDescription, setShowDescription] = useState(false);
 
   useEffect(() => {
     Aos.init({
-      duration: 1000, 
+      duration: 1000,
       offset: 0,
-      // easing: "ease-in-out", 
+      // easing: "ease-in-out",
       // once: false
     });
   }, []);
 
   return (
-    <div className="wrapper" >
+    <div className="wrapper">
       <div
         className="card"
         showDescription={showDescription}
@@ -37,6 +45,11 @@ const ProjectCard = ({ thumbnail, name, description, column, link, tools, fade }
           {showDescription && (
             <div className="description" showDescription={showDescription}>
               <p>{description}</p>
+              <div className="tools-visible">
+                {tools.map((tool) => (
+                  <div>{tool}</div>
+                ))}
+              </div>
               <a href={link} target="_blank" rel="noreferrer">
                 URL <Link />
               </a>

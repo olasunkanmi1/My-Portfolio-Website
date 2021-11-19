@@ -86,5 +86,9 @@ export const DesktopStyled = styled.section`
     ::-webkit-scrollbar-thumb {
       background: var(--primary);
     }
+
+    @media screen and (max-width: 840px) {
+      padding: 2rem 1.5rem;
+    }
   }
 `;

@@ -42,27 +42,6 @@ export const HomeStyled = styled.section`
     }
   }
 
-  .img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 0.5rem;
-    padding-left: 0.5rem;
-    width: 200px;
-    height: 200px;
-    border-radius: 0 50% 50% 50%;
-    transform: rotate(45deg);
-    overflow: hidden;
-    margin: 4rem 0 0;
-    box-shadow: var(--primary) 0px 3px 8px;
-
-    img {
-      width: 150%;
-      height: 150%;
-      transform: rotate(-45deg);
-    }
-  }
-
   .wrap {
     display: flex;
     align-items: center;
@@ -73,7 +52,7 @@ export const HomeStyled = styled.section`
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      width: 500px;
+      width: 60%;
 
       p {
         font-size: 20px;
@@ -86,50 +65,16 @@ export const HomeStyled = styled.section`
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        padding-right: 20px;
 
         .line {
-          width: 100%;
-          max-width: 8.4rem;
+          max-width: calc(calc(100% - 180px) / 2);
           height: 3px;
           background-color: var(--secondary);
           position: relative;
           -webkit-animation: grow 8s forwards;
           -moz-animation: grow 8s forwards;
           animation: grow 8s forwards;
-          /* animation-delay: 0.5s; */
-        }
-
-        /* .line-right::before,
-        .line-right::after,
-        .line-left::before,
-        .line-left::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          border: 0.5rem solid transparent;
-          opacity: 1;
-          animation: grow 2s forwards;
-        } */
-
-        .line-right::before {
-          border-right-color: var(--secondary);
-          right: 0;
-        }
-
-        .line-left::before {
-          border-left-color: var(--secondary);
-          left: 0;
-        }
-
-        .line-right::after {
-          border-left-color: var(--secondary);
-          right: -10px;
-        }
-
-        .line-left::after {
-          border-right-color: var(--secondary);
-          left: -10px;
         }
 
         @keyframes grow {
@@ -138,7 +83,7 @@ export const HomeStyled = styled.section`
           }
           100% {
             opacity: 1;
-            max-width: 8.4rem;
+            width: 100%;
           }
         }
 
@@ -148,7 +93,7 @@ export const HomeStyled = styled.section`
           }
           100% {
             opacity: 1;
-            max-width: 8.4rem;
+            width: 100%;
           }
         }
 
@@ -158,7 +103,7 @@ export const HomeStyled = styled.section`
           }
           100% {
             opacity: 1;
-            max-width: 8.4rem;
+            width: 100%;
           }
         }
       }
@@ -175,11 +120,64 @@ export const HomeStyled = styled.section`
         width: 150px;
         border-radius: 3px;
         margin: 0 15px;
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
 
         :hover {
-          transform: scale(.98);
+          transform: scale(0.98);
         }
+      }
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      width: 40%;
+
+      .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        width: 200px;
+        height: 200px;
+        min-width: 30%;
+        border-radius: 0 50% 50% 50%;
+        transform: rotate(45deg);
+        overflow: hidden;
+        margin: 4rem 0 0;
+        box-shadow: var(--primary) 0px 3px 8px;
+
+        img {
+          width: 150%;
+          height: 150%;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  //mediaqueries
+  @media screen and (max-width: 1050px) {
+    h1 {
+      font-size: 30px;
+    }
+
+    .typing {
+      font-size: 24px;
+    }
+
+    .wrap {
+      flex-direction: column;
+
+      .info {
+        width: 100%;
+        order: 2;
+        margin-top: 20px;
+      }
+
+      .image-container {
+        width: 100%;
       }
     }
   }
