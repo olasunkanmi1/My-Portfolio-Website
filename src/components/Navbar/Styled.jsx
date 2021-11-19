@@ -142,4 +142,8 @@ export const NavbarStyled = styled.section`
     background: var(--secondary);
     /* transition: 0.2s ease-in-out; */
   }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;

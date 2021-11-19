@@ -5,14 +5,14 @@ import { menuData } from "../../data/MenuData";
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
-    <SidebarStyled isOpen={isOpen}>
+    <SidebarStyled isOpen={isOpen} onClick={toggle}>
       <Scrollspy
         className="scrollspy"
         items={["home", "about", "skills", "portfolio", "contact"]}
         currentClassName="current"
       >
         {menuData.map((link) => (
-          <li className="menu-link" key={link.title}>
+          <li className="menu-link" key={link.title} onClick={toggle}>
             <a href={`#${link.title}`}>{link.title}</a>
           </li>
         ))}

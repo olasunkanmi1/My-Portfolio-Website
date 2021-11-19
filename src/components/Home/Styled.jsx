@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const HomeStyled = styled.section`
+  /* z-index: 10; */
   /* margin-top: 85px; */
   h1 {
     font-size: 40px;
@@ -180,5 +181,13 @@ export const HomeStyled = styled.section`
         width: 100%;
       }
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    background: #fff;
+    z-index: 1;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
   }
 `;

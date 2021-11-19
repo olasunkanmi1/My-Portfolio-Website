@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const AboutStyled = styled.section`
+  h1 {
+    font-size: 30px;
+  }
+  
   .wrap {
     display: flex;
     flex-wrap: wrap;
@@ -13,7 +17,7 @@ export const AboutStyled = styled.section`
       text-align: center;
       padding: 10px;
       width: 200px;
-      margin: 0 15px 15px 0;
+      margin-top: 15px;
       border-radius: 5px;
       box-shadow: var(--primary) 0px 3px 8px;
 
@@ -80,5 +84,13 @@ export const AboutStyled = styled.section`
     .cv {
       background: var(--primary);
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    background: #fff;
+    z-index: 1;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
   }
 `;

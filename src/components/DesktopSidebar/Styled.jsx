@@ -65,4 +65,8 @@ export const SidebarStyled = styled.section`
   @media screen and (max-width: 840px) {
     margin-right: 20px;
   }
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;

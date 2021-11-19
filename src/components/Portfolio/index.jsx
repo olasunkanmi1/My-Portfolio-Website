@@ -8,14 +8,14 @@ import "aos/dist/aos.css";
 const Portfolio = ({ toggle }) => {
   useEffect(() => {
     Aos.init({
-      duration: 3000, 
-      offset: 500,
+      duration: 1000, 
+      offset: 80,
     });
   }, []);
 
   return (
     <PortfolioStyled id="portfolio" className={ toggle === 4 ? 'content active-content' : 'content'}>
-      <h2 data-aos="fade-left">Some of my projects</h2>
+      <h1 data-aos="fade-left">Some of my projects</h1>
 
         {portfolioData.map((project) => (
           <ProjectCard key={project.name} {...project} data-aos="fade-left" />

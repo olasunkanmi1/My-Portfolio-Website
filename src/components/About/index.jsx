@@ -5,14 +5,17 @@ import { aboutData } from "../../data/AboutData"
 const About = ({ toggle }) => {
     return (
         <AboutStyled id="about" className={ toggle === 2 ? 'content active-content' : 'content'}>
+            <h1>About Me</h1>
             <div className="wrap">
                 {aboutData.map(item => (
-                    <div className="card">
-                        <div className="svg">
-                            {item.svg}
+                    <div style={{padding: "7px", height: "auto"}}>
+                        <div className="card">
+                            <div className="svg">
+                                {item.svg}
+                            </div>
+                            <h4>{item.title}</h4>
+                            <p>{item.description}</p>
                         </div>
-                        <h4>{item.title}</h4>
-                        <p>{item.description}</p>
                     </div>
                 ))}
             </div>

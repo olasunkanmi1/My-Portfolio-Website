@@ -4,6 +4,10 @@ export const PortfolioStyled = styled.section`
   display: flex;
   flex-direction: column;
 
+  h1 {
+    font-size: 30px;
+  }
+
   .wrapper {
     display: grid;
     grid-template-columns: 0.6fr 0.4fr;
@@ -162,5 +166,13 @@ export const PortfolioStyled = styled.section`
         display: none;
       }
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    background: #fff;
+    z-index: 1;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
   }
 `;
