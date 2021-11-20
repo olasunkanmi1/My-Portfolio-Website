@@ -76,6 +76,7 @@ export const HomeStyled = styled.section`
           -webkit-animation: grow 8s forwards;
           -moz-animation: grow 8s forwards;
           animation: grow 8s forwards;
+          z-index: 9;
         }
 
         @keyframes grow {
@@ -187,7 +188,7 @@ export const HomeStyled = styled.section`
     background: #fff;
     z-index: 1;
     padding: 2rem 1rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0 2rem;
     border-radius: 5px;
   }
 `;

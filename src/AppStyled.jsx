@@ -33,7 +33,7 @@ export const AppStyled = styled.body`
     }
 
     @media screen and (max-width: 768px) {
-      padding: 4rem 5rem;
+      padding: 1rem 5rem;
       flex-direction: column;
       overflow-y: scroll;
       background-image: none;
@@ -42,7 +42,7 @@ export const AppStyled = styled.body`
     }
 
     @media screen and (max-width: 600px) {
-      padding: 4rem 4rem;
+      padding: 1rem 4rem;
     }
 
     @media screen and (max-width: 500px) {
@@ -104,6 +104,7 @@ export const AppStyled = styled.body`
 
       ::-webkit-scrollbar-thumb {
         background: var(--primary);
+        border-radius: 5px;
       }
 
       @media screen and (max-width: 840px) {

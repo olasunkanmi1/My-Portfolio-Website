@@ -44,7 +44,7 @@ export const portfolioData = [
     link: "https://propertyfinder.netlify.app/",
     tools: ["React", "Axios", "Styled-components", "Redux"],
     column: "2/3",
-    fade: "fade-right"
+    fade: "fade-left"
   },
   {
     thumbnail: cashalat,
@@ -54,7 +54,7 @@ export const portfolioData = [
     link: "https://cashalat.netlify.app/",
     tools: ["React", "Styled-components"],
     column: "1/2",
-    fade: "fade-left"
+    fade: "fade-right"
   },
   {
     thumbnail: github,
@@ -64,7 +64,7 @@ export const portfolioData = [
     link: "https://github-usernamesearch.netlify.app/",
     tools: ["HTML", "CSS", "Vanilla JS"],
     column: "2/3",
-    fade: "fade-right"
+    fade: "fade-left"
   },
   {
     thumbnail: portfolio,
@@ -74,7 +74,7 @@ export const portfolioData = [
     link: "https://olasunkanmi.netlify.app/",
     tools: ["React", "Styled-components", "Formik"],
     column: "1/2",
-    fade: "fade-left"
+    fade: "fade-right"
   },
   {
     thumbnail: calculator,

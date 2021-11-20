@@ -9,7 +9,7 @@ const Portfolio = ({ toggle }) => {
   useEffect(() => {
     Aos.init({
       duration: 1000, 
-      offset: 80,
+      offset: 50,
     });
   }, []);
 
@@ -18,7 +18,7 @@ const Portfolio = ({ toggle }) => {
       <h1 data-aos="fade-left">Some of my projects</h1>
 
         {portfolioData.map((project) => (
-          <ProjectCard key={project.name} {...project} data-aos="fade-left" />
+          <ProjectCard key={project.name} {...project} />
         ))}
     </PortfolioStyled>
   );

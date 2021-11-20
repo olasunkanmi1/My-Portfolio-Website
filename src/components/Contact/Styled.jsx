@@ -29,14 +29,14 @@ export const ContactStyled = styled.section`
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 5px 8px;
-          font-size: 14px;
+          padding: 7px 10px;
+          font-size: 16px;
           font-weight: 500;
           width: 100%;
           outline: none;
           border: 1px solid var(--primary);
           transition: 0.3s ease-in-out;
-          background: #ddd;
+          background: #eee;
           resize: none;
 
           :focus {
@@ -82,14 +82,19 @@ export const ContactStyled = styled.section`
         margin-bottom: 10px;
       }
 
-      a {
-        width: 35px;
-        height: 35px;
-        margin-bottom: 10px;
+      div {
+        display: flex;
+        flex-direction: column;
 
-        svg {
-          width: 100%;
-          height: 100%;
+        a {
+          width: 35px;
+          height: 35px;
+          margin-bottom: 10px;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
@@ -103,11 +108,14 @@ export const ContactStyled = styled.section`
       }
 
       .links {
-        flex-direction: row;
+
+        div {
+          flex-direction: row;
         flex-wrap: wrap;
 
-        h4, a {
-          margin-right: 15px;
+          a {
+            margin-right: 15px;
+          }
         }
       }
     }

@@ -6,6 +6,8 @@ export const SidebarStyled = styled.section`
   padding: 10px;
   height: 100%;
   width: 120px;
+  min-width: 120px;
+  overflow-y: scroll;
   border-radius: 5px;
   margin-right: 50px;
   background: rgba(255, 255, 255, 0.5);

@@ -22,11 +22,17 @@ export const PortfolioStyled = styled.section`
     .card {
       display: flex;
       flex-direction: column;
+      grid-row: 1/2;
       padding: 10px;
       background: #fff;
       box-shadow: 0 0 10px 5px var(--primary);
       overflow: hidden;
       width: 100%;
+      transition: .4s;
+
+      :hover {
+        transform: scale(1.02);
+      }
 
       .thumbnail {
         width: 100%;
@@ -105,6 +111,7 @@ export const PortfolioStyled = styled.section`
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      grid-row: 1/2;
 
       div {
         font-size: 14px;
@@ -146,7 +153,7 @@ export const PortfolioStyled = styled.section`
           flex-wrap: wrap;
 
           div {
-            font-size: 12px;
+            font-size: 14px;
             margin: 0 10px 10px 0;
             color: #fff;
             padding: 7px;
@@ -174,5 +181,6 @@ export const PortfolioStyled = styled.section`
     padding: 2rem 1rem;
     margin-bottom: 2rem;
     border-radius: 5px;
+    height: auto;
   }
 `;

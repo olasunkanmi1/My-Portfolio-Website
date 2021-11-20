@@ -3,12 +3,14 @@ import styled from "styled-components";
 export const AboutStyled = styled.section`
   h1 {
     font-size: 30px;
+    margin-bottom: 15px;
   }
   
   .wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: space-evenly;
 
     .card {
       display: flex;
@@ -17,7 +19,6 @@ export const AboutStyled = styled.section`
       text-align: center;
       padding: 10px;
       width: 200px;
-      margin-top: 15px;
       border-radius: 5px;
       box-shadow: var(--primary) 0px 3px 8px;
 
@@ -25,8 +26,8 @@ export const AboutStyled = styled.section`
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 70px;
-        height: 70px;
+        width: 85px;
+        height: 85px;
         border-radius: 0 50% 50% 50%;
         transform: rotate(45deg);
         margin-top: 2rem;
@@ -42,24 +43,26 @@ export const AboutStyled = styled.section`
 
       h4 {
         margin: 15px 0;
+        font-size: 18px;
       }
 
       p {
-        font-size: 14px;
+        font-size: 16px;
         margin: 0;
       }
     }
   }
 
   p {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   .buttons {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 
     .btn {
       display: flex;
@@ -67,7 +70,7 @@ export const AboutStyled = styled.section`
       align-items: center;
       padding: 10px 15px;
       color: #fff;
-      font-size: 14px;
+      font-size: 16px;
       border-radius: 3px;
       transition: 0.5s ease-in-out;
 

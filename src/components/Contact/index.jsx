@@ -44,7 +44,7 @@ const validate = (values) => {
 const Contact = ({ toggle }) => {
   const formik = useFormik({
     initialValues,
-    onSubmit, 
+    onSubmit,
     validate,
   });
 
@@ -56,14 +56,14 @@ const Contact = ({ toggle }) => {
       <h2>Have a question or want to work together?</h2>
 
       <p>
-        I'm actively seeking for a frontend development opportunity where I
-        can contribute, learn and grow. Don't hesitate to reach out to me if you
+        I'm actively seeking for a frontend development opportunity where I can
+        contribute, learn and grow. Don't hesitate to reach out to me if you
         have any opportunity.
       </p>
 
       <div className="wrap">
         <form action="" onSubmit={formik.handleSubmit}>
-          <div>            
+          <div>
             <input
               type="text"
               name="name"
@@ -72,7 +72,9 @@ const Contact = ({ toggle }) => {
               value={formik.values.name}
               placeholder="Name"
             />
-            {formik.touched.name && formik.errors.name && <p>{formik.errors.name}</p>}
+            {formik.touched.name && formik.errors.name && (
+              <p>{formik.errors.name}</p>
+            )}
           </div>
 
           <div>
@@ -84,7 +86,9 @@ const Contact = ({ toggle }) => {
               value={formik.values.email}
               placeholder="Email"
             />
-            {formik.touched.email && formik.errors.email && <p>{formik.errors.email}</p>}
+            {formik.touched.email && formik.errors.email && (
+              <p>{formik.errors.email}</p>
+            )}
           </div>
 
           <div>
@@ -98,51 +102,56 @@ const Contact = ({ toggle }) => {
               rows="10"
               placeholder="Message"
             />
-            {formik.touched.message && formik.errors.message && <p>{formik.errors.message}</p>}
+            {formik.touched.message && formik.errors.message && (
+              <p>{formik.errors.message}</p>
+            )}
           </div>
           <button type="submit">SUBMIT</button>
         </form>
 
         <div className="links">
           <h4>Connect with me via: </h4>
-          <a
-            href="mailto:olasunkanmiaq@gmail.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Mail />
-          </a>
-          <a href="tel:2348100991565" target="_blank" rel="noreferrer">
-            <Phone />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/aqo"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Linkedin />
-          </a>
-          <a
-            href="https://wa.me/2349098419054"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Whatsapp />
-          </a>
-          <a
-            href="https://www.twitter.com/ola_szuko"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Twitter />
-          </a>
-          <a
-            href="https://www.github.com/olasunkanmi1"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Github />
-          </a>
+
+          <div>
+            <a
+              href="mailto:olasunkanmiaq@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Mail />
+            </a>
+            <a href="tel:2348100991565" target="_blank" rel="noreferrer">
+              <Phone />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/aqo"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Linkedin />
+            </a>
+            <a
+              href="https://wa.me/2349098419054"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Whatsapp />
+            </a>
+            <a
+              href="https://www.twitter.com/ola_szuko"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Twitter />
+            </a>
+            <a
+              href="https://www.github.com/olasunkanmi1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Github />
+            </a>
+          </div>
         </div>
       </div>
     </ContactStyled>
