@@ -10,6 +10,7 @@ const ProjectCard = ({ thumbnail, name, description, column, link, tools, fade }
     <div className="wrapper" data-aos={fade}>
       <div
         className="card"
+        id
         showDescription={showDescription}
         style={{ gridColumn: `${column}`}}
       >
