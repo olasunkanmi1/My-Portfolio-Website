@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ContactStyled } from "./Styled";
 import { useFormik } from "formik";
 import { ReactComponent as Mail } from "../../assets/icons/mail.svg";
@@ -7,6 +7,8 @@ import { ReactComponent as Linkedin } from "../../assets/icons/linkedin.svg";
 import { ReactComponent as Whatsapp } from "../../assets/icons/whatsapp.svg";
 import { ReactComponent as Twitter } from "../../assets/icons/twitter.svg";
 import { ReactComponent as Github } from "../../assets/icons/github.svg";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const initialValues = {
   name: "",
@@ -48,21 +50,28 @@ const Contact = ({ toggle }) => {
     validate,
   });
 
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, 
+      offset: 50,
+    });
+  }, []);
+
   return (
     <ContactStyled
       id="contact"
       className={toggle === 5 ? "content active-content" : "content"}
     >
-      <h2>Have a question or want to work together?</h2>
+      <h2 data-aos="fade-left">Have a question or want to work together?</h2>
 
-      <p>
+      <p data-aos="fade-up">
         I'm actively seeking for a frontend development opportunity where I can
         contribute, learn and grow. Don't hesitate to reach out to me if you
         have any opportunity.
       </p>
 
       <div className="wrap">
-        <form action="" onSubmit={formik.handleSubmit}>
+        <form action="" onSubmit={formik.handleSubmit} data-aos="fade-up">
           <div>
             <input
               type="text"

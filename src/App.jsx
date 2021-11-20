@@ -3,7 +3,6 @@ import GlobalStyles from "./GlobalStyles";
 import { AppStyled } from "./AppStyled";
 
 //components
-import { Mobile, Desktop } from "./pages";
 import { About, Contact, DesktopSidebar, Home, Navbar, Portfolio, Skills } from "./components";
 
 function App() {
@@ -33,7 +32,6 @@ function App() {
         <Portfolio toggle={toggle} />
         <Contact toggle={toggle} />
       </div>
-      {/* <Desktop /> */}
     </AppStyled>
   );
 }

@@ -151,8 +151,8 @@ export const HomeStyled = styled.section`
         box-shadow: var(--primary) 0px 3px 8px;
 
         img {
-          width: 150%;
-          height: 150%;
+          width: 130%;
+          height: 130%;
           transform: rotate(-45deg);
         }
       }
@@ -163,10 +163,11 @@ export const HomeStyled = styled.section`
   @media screen and (max-width: 1050px) {
     h1 {
       font-size: 30px;
+      line-height: 35px;
     }
 
     .typing {
-      font-size: 24px;
+      font-size: 25px;
     }
 
     .wrap {

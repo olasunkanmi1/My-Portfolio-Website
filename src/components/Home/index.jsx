@@ -2,16 +2,26 @@ import { useEffect, useRef } from "react";
 import { HomeStyled } from "./Styled";
 import me from "../../assets/me.jpeg";
 import { init } from "ityped";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const Home = ({ toggle }) => {
   const textRef = useRef();
 
   useEffect(() => {
     init(textRef.current, {
-      strings: ["Frontend Developer"],
+      strings: ["Frontend Developer 💻"],
       typeSpeed: 80,
       backSpeed: 50,
       showCursor: false,
       loop: false,
+    });
+  }, []);
+
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, 
+      offset: 50,
     });
   }, []);
 
@@ -44,7 +54,7 @@ const Home = ({ toggle }) => {
           </div>
         </div>
 
-        <div className="image-container">
+        <div className="image-container" data-aos="zoom-in">
           <div className="img">
             <img src={me} alt="DP" />
           </div>

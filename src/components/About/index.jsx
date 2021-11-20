@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AboutStyled } from "./Styled";
 import { aboutData } from "../../data/AboutData";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const About = ({ toggle }) => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000, 
+      offset: 50,
+    });
+  }, []);
+
   return (
     <AboutStyled
       id="about"
       className={toggle === 2 ? "content active-content" : "content"}
     >
       <h1>About Me</h1>
-      <div className="wrap">
+      <div className="wrap" data-aos="fade-left">
         {aboutData.map((item) => (
-          <div className="card">
+          <div className="card" data-aos="fade-up">
             <div className="svg">{item.svg}</div>
             <h4>{item.title}</h4>
             <p>{item.description}</p>
