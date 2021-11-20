@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ReactComponent as Chevron } from "../../assets/icons/chevron.svg";
 import { ReactComponent as Link } from "../../assets/icons/link.svg";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ProjectCard = ({ thumbnail, name, description, column, link, tools, fade }) => {
   const [showDescription, setShowDescription] = useState(false);

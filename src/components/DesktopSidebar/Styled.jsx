@@ -7,6 +7,7 @@ export const SidebarStyled = styled.section`
   height: 100%;
   width: 120px;
   min-width: 120px;
+  overflow-x: hidden;
   overflow-y: scroll;
   border-radius: 5px;
   margin-right: 50px;
@@ -62,6 +63,15 @@ export const SidebarStyled = styled.section`
       height: 100%;
       background: var(--secondary);
     }
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 5px;
   }
 
   @media screen and (max-width: 840px) {
