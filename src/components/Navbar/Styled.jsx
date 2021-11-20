@@ -13,31 +13,31 @@ export const NavbarStyled = styled.section`
   background: #fff;
 
   @media screen and (max-width: 1200px) {
-    padding: 1rem 8rem;
+    padding: 0 8rem;
   }
 
   @media screen and (max-width: 1000px) {
-    padding: 1rem 7rem;
+    padding: 0 7rem;
   }
 
   @media screen and (max-width: 920px) {
-    padding: 1rem 6rem;
+    padding: 0 6rem;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 1rem 5rem;
+    padding: 0 5rem;
   }
 
   @media screen and (max-width: 600px) {
-    padding: 1rem 4rem;
+    padding: 0 4rem;
   }
 
   @media screen and (max-width: 500px) {
-    padding: 1rem 3rem;
+    padding: 0 3rem;
   }
 
   @media screen and (max-width: 450px) {
-    padding: 1rem 2rem;
+    padding: 0 2rem;
   }
 
   .logo {
