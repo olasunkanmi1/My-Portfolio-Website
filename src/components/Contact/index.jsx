@@ -52,7 +52,7 @@ const Contact = ({ toggle }) => {
 
   useEffect(() => {
     Aos.init({
-      duration: 1000, 
+      duration: 1000,
       offset: 50,
     });
   }, []);
@@ -71,7 +71,16 @@ const Contact = ({ toggle }) => {
       </p>
 
       <div className="wrap">
-        <form action="" onSubmit={formik.handleSubmit} data-aos="fade-up">
+        <form
+          action=""
+          onSubmit={formik.handleSubmit}
+          data-aos="fade-up"
+          name="portfolio v2"
+          method="post"
+          data-netlify="true"
+
+        >
+          <input type="hidden" name="form-name" value="portfolio v2" />
           <div>
             <input
               type="text"

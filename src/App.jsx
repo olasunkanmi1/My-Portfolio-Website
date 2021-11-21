@@ -25,7 +25,7 @@ function App() {
       <Navbar />
       <div className="view">
         <DesktopSidebar toggle={toggle} changeTab={changeTab} />
-
+        
         <Home toggle={toggle} />
         <About toggle={toggle} />
         <Skills toggle={toggle} />
