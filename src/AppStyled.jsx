@@ -8,7 +8,7 @@ export const AppStyled = styled.body`
     display: flex;
     padding: 4rem 10rem;
     width: 100vw;
-    height: calc(100vh - calc(100vh - 100%));
+    height: 100vh;
     overflow: hidden;
     position: relative;
     /* background: #8b97bd;

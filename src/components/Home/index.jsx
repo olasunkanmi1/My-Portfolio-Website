@@ -55,8 +55,16 @@ const Home = ({ toggle }) => {
         </div>
 
         <div className="image-container" data-aos="zoom-in">
+          <div className="display left">
+            <div className="square"> <div /> <div /> </div>
+          </div> 
+
           <div className="img">
             <img src={me} alt="DP" />
+          </div>
+          
+          <div className="display right">
+            <div className="square"> <div /> <div /> </div>
           </div>
         </div>
       </div>

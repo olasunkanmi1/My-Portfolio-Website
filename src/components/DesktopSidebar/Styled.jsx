@@ -23,8 +23,8 @@ export const SidebarStyled = styled.section`
     margin-bottom: 30px;
 
     img {
-      height: 100%;
-      width: 100px;
+      /* height: 100%; */
+      width: 100%;
     }
   }
 

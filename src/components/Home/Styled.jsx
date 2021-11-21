@@ -134,6 +134,51 @@ export const HomeStyled = styled.section`
       display: flex;
       justify-content: center;
       width: 40%;
+      position: relative;
+
+      .display {
+        display: none;
+        position: absolute;
+
+        @media screen and (max-width: 768px) {
+          display: flex;
+        }
+      }
+
+      .left {
+        top: 0;
+        left: -50px;
+
+        .square {
+          div {
+            animation: flip-left 5s linear infinite;
+            transform-origin: right bottom;
+          }
+          
+          div:nth-child(2) {
+            animation-delay: 2.5s;
+            opacity: .7;
+          }
+        }
+      }
+     
+      .right {
+        bottom: 0;
+        right: -50px;
+
+        .square {
+
+          div {
+            animation: flip-right 5s linear infinite;
+            transform-origin: right bottom;
+          }
+          
+          div:nth-child(2) {
+            animation-delay: 2.5s;
+            opacity: .7;
+          }
+        }
+      }
 
       .img {
         display: flex;
@@ -191,5 +236,45 @@ export const HomeStyled = styled.section`
     padding: 2rem 1rem;
     margin: 2rem 0 2rem;
     border-radius: 5px;
+
+    .image-container {
+
+      .display {
+        
+        .square {
+          width: 100px;
+          height: 100px;
+          position: relative;
+          perspective: 2000px;
+
+          div {
+            position: absolute;
+            top: 0;
+            height: 50px;
+            width: 50px;
+            background: #f17e7e;
+          }
+        }
+      }
+
+      
+    }
+    
+  }
+
+  @keyframes flip-left {
+    0% { transform: rotateX(0) rotateY(0) }
+    25% { transform: rotateX(180deg) rotateY(0) }
+    50% { transform: rotateX(180deg) rotateY(180deg) }
+    75% { transform: rotateX(0) rotateY(180deg) }
+    100% { transform: rotateX(0) rotateY(0) }
+  }
+  
+  @keyframes flip-right {
+    0% { transform: rotateX(0) rotateY(0) }
+    25% { transform: rotateX(0) rotateY(180deg) }
+    50% { transform: rotateX(180deg) rotateY(180deg) }
+    75% { transform: rotateX(180deg) rotateY(0) }
+    100% { transform: rotateX(0) rotateY(0) }
   }
 `;
