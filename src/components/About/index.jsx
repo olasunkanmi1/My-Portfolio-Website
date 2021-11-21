@@ -20,7 +20,7 @@ const About = ({ toggle }) => {
       <h1>About Me</h1>
       <div className="wrap" data-aos="fade-left">
         {aboutData.map((item) => (
-          <div className="card" data-aos="fade-up">
+          <div className="card" data-aos="fade-up" key={item.title}>
             <div className="svg">{item.svg}</div>
             <h4>{item.title}</h4>
             <p>{item.description}</p>

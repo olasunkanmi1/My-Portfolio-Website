@@ -21,7 +21,7 @@ const Skills = ({ toggle }) => {
 
       <div className="wrap">
           {SkillsData.map((skill) => (
-              <div className="skill" data-aos="fade-up">
+              <div className="skill" data-aos="fade-up" key={skill.name}>
                 {skill.svg}
                 <h4>{skill.name}</h4>
               </div>

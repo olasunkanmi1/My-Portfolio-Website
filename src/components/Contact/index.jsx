@@ -72,15 +72,16 @@ const Contact = ({ toggle }) => {
 
       <div className="wrap">
         <form
-          action=""
-          onSubmit={formik.handleSubmit}
           data-aos="fade-up"
-          name="portfolio v2"
-          method="post"
+          name="portfolio-v2"
           data-netlify="true"
-
+          method="POST"
+          data-netlify-honeypot="bot-field"
+          onSubmit="submit"
         >
-          <input type="hidden" name="form-name" value="portfolio v2" />
+          <input type="hidden" name="form-name" value="portfolio-v2" />
+          <div hidden><input name="bot-field" /></div>
+
           <div>
             <input
               type="text"
@@ -89,6 +90,7 @@ const Contact = ({ toggle }) => {
               onBlur={formik.handleBlur}
               value={formik.values.name}
               placeholder="Name"
+              required
             />
             {formik.touched.name && formik.errors.name && (
               <p>{formik.errors.name}</p>
@@ -103,6 +105,7 @@ const Contact = ({ toggle }) => {
               onBlur={formik.handleBlur}
               value={formik.values.email}
               placeholder="Email"
+              required
             />
             {formik.touched.email && formik.errors.email && (
               <p>{formik.errors.email}</p>
@@ -119,6 +122,7 @@ const Contact = ({ toggle }) => {
               cols="30"
               rows="10"
               placeholder="Message"
+              required
             />
             {formik.touched.message && formik.errors.message && (
               <p>{formik.errors.message}</p>

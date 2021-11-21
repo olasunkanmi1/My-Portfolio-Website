@@ -7,7 +7,7 @@ const ProjectCard = ({ thumbnail, name, description, column, link, tools, fade }
 
 
   return (
-    <div className="wrapper" data-aos={fade}>
+    <div className="wrapper" data-aos={fade} key={name}>
       <div
         className="card"
         id
