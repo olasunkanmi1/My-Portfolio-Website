@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import bg from "./assets/background.jpg";
 
 export const AppStyled = styled.body`
   display: flex;
@@ -11,7 +12,7 @@ export const AppStyled = styled.body`
     height: 100vh;
     overflow: hidden;
     position: relative;
-    background-image: url("https://images.unsplash.com/photo-1585076641399-5c06d1b3365f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-image: url(${bg});
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -109,6 +110,22 @@ export const AppStyled = styled.body`
       @media screen and (max-width: 840px) {
         padding: 2rem 1.5rem;
       }
+    }
+  }
+
+  .back-to-top {
+    display: none;
+
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+      background: var(--secondary);
     }
   }
 `;

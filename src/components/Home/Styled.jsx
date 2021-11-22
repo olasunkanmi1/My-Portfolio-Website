@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const HomeStyled = styled.section`
-  /* z-index: 10; */
-  /* margin-top: 85px; */
+
   h1 {
     font-size: 40px;
     line-height: 50px;
@@ -75,7 +74,6 @@ export const HomeStyled = styled.section`
           -webkit-animation: grow 8s forwards;
           -moz-animation: grow 8s forwards;
           animation: grow 8s forwards;
-          z-index: 9;
         }
 
         @keyframes grow {
@@ -132,6 +130,7 @@ export const HomeStyled = styled.section`
     .image-container {
       display: flex;
       justify-content: center;
+      align-items: center;
       width: 40%;
       position: relative;
 
@@ -150,12 +149,12 @@ export const HomeStyled = styled.section`
 
         .square {
           div {
-            animation: flip-left 5s linear infinite;
+            animation: flip-left 8s linear infinite;
             transform-origin: right bottom;
           }
           
           div:nth-child(2) {
-            animation-delay: 2.5s;
+            animation-delay: 3.5s;
             opacity: .7;
           }
         }
@@ -168,12 +167,12 @@ export const HomeStyled = styled.section`
         .square {
 
           div {
-            animation: flip-right 5s linear infinite;
+            animation: flip-right 8s linear infinite;
             transform-origin: right bottom;
           }
           
           div:nth-child(2) {
-            animation-delay: 2.5s;
+            animation-delay: 3.5s;
             opacity: .7;
           }
         }
@@ -187,7 +186,6 @@ export const HomeStyled = styled.section`
         padding-left: 0.5rem;
         width: 200px;
         height: 200px;
-        min-width: 30%;
         border-radius: 0 50% 50% 50%;
         transform: rotate(45deg);
         overflow: hidden;
@@ -236,29 +234,23 @@ export const HomeStyled = styled.section`
     padding: 2rem 1rem;
     border-radius: 5px;
 
-    .image-container {
-
-      .display {
+    .display {
         
-        .square {
-          width: 100px;
-          height: 100px;
-          position: relative;
-          perspective: 2000px;
+      .square {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        perspective: 2000px;
 
-          div {
-            position: absolute;
-            top: 0;
-            height: 50px;
-            width: 50px;
-            background: #f17e7e;
-          }
+        div {
+          position: absolute;
+          top: 0;
+          height: 50px;
+          width: 50px;
+          background: #f17e7e;
         }
       }
-
-      
     }
-    
   }
 
   @keyframes flip-left {
