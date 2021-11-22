@@ -35,8 +35,18 @@ export const PortfolioStyled = styled.section`
       }
 
       .thumbnail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         height: 200px;
+        background: rgb(20, 34, 81, 0.9);
+        overflow: hidden;
+
+        img {
+          width: 80%;
+          height: 100%;
+        }
       }
 
       .about {
@@ -85,11 +95,11 @@ export const PortfolioStyled = styled.section`
             align-items: center;
             padding: 10px 15px;
             outline: 2px solid var(--primary);
-            color: var(--primary);
             border-radius: 5px;
             color: var(--primary);
             font-weight: 600;
             transition: 0.5s ease-in-out;
+            cursor: pointer;
 
             svg {
               width: 20px;
@@ -175,7 +185,7 @@ export const PortfolioStyled = styled.section`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     background: #fff;
     z-index: 1;
     padding: 2rem 1rem;

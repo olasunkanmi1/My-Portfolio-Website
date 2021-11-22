@@ -12,7 +12,6 @@ export const HomeStyled = styled.section`
     display: flex;
     font-size: 30px;
     font-weight: 600;
-    height: 50px;
     color: var(--secondary);
   }
 
@@ -140,7 +139,7 @@ export const HomeStyled = styled.section`
         display: none;
         position: absolute;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1024px) {
           display: flex;
         }
       }
@@ -230,7 +229,7 @@ export const HomeStyled = styled.section`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     background: #fff;
     z-index: 1;
     padding: 2rem 1rem;

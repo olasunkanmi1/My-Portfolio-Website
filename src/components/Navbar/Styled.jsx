@@ -143,7 +143,7 @@ export const NavbarStyled = styled.section`
     /* transition: 0.2s ease-in-out; */
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     display: none;
   }
 `;

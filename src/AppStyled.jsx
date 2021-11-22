@@ -11,10 +11,6 @@ export const AppStyled = styled.body`
     height: 100vh;
     overflow: hidden;
     position: relative;
-    /* background: #8b97bd;
-    background: -webkit-radial-gradient(bottom left, #8b97bd, #ec7c7b);
-    background: -moz-radial-gradient(bottom left, #8b97bd, #ec7c7b);
-    background: radial-gradient(to top right, #8b97bd, #ec7c7b); */
     background-image: url("https://images.unsplash.com/photo-1585076641399-5c06d1b3365f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
     background-position: center;
     background-size: cover;
@@ -22,6 +18,14 @@ export const AppStyled = styled.body`
 
     @media screen and (max-width: 1200px) {
       padding: 4rem 8rem;
+    }
+
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      overflow-y: scroll;
+      background-image: none;
+      margin-top: 4rem;
+      height: auto;
     }
 
     @media screen and (max-width: 1000px) {
@@ -34,11 +38,6 @@ export const AppStyled = styled.body`
 
     @media screen and (max-width: 768px) {
       padding: 1rem 5rem;
-      flex-direction: column;
-      overflow-y: scroll;
-      background-image: none;
-      margin-top: 4rem;
-      height: auto;
     }
 
     @media screen and (max-width: 600px) {
@@ -67,7 +66,7 @@ export const AppStyled = styled.body`
       opacity: 0.5;
       z-index: 0;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         background: #eee;
       }
     }
@@ -75,7 +74,7 @@ export const AppStyled = styled.body`
     .content {
       display: none;
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         display: flex;
         flex-direction: column;
       }

@@ -1,11 +1,11 @@
 import olastore from "../assets/olastore.png";
-import gmail from "../assets/gmail.jpg";
+import gmail from "../assets/gmail.png";
 import howbodi from "../assets/howbodi.png";
-import portfolio from "../assets/pf.jpg";
-import property from "../assets/property.jpg";
+import portfolio from "../assets/pf.png";
+import property from "../assets/property.png";
 import cashalat from "../assets/cashalat.png";
-import github from "../assets/github.jpeg";
-import calculator from "../assets/calc.jpeg";
+import github from "../assets/github.png";
+import calculator from "../assets/calc.png";
 
 export const portfolioData = [
   {
@@ -21,7 +21,7 @@ export const portfolioData = [
     thumbnail: gmail,
     name: "gmail inboxpage clone",
     description: "Cloned version of the Gmail showing the inbox page.",
-    link: "https://drive.google.com/file/d/1yQb2o4UH5FR1X7gFWujQXfN3QZqraK3y/view?usp=sharing",
+    drive: "https://drive.google.com/file/d/1yQb2o4UH5FR1X7gFWujQXfN3QZqraK3y/view?usp=sharing",
     tools: ["HTML", "CSS", "Vanilla JS"],
     column: "2/3",
     fade: "fade-left"
@@ -71,7 +71,7 @@ export const portfolioData = [
     name: "portfolio website",
     description:
       "My portfolio website showcasing my relevant skills and projects.",
-    link: "https://olasunkanmi.netlify.app/",
+    link: "https://olasunkanmi-dev.netlify.app/",
     tools: ["React", "Styled-components", "Formik"],
     column: "1/2",
     fade: "fade-right"
@@ -79,7 +79,7 @@ export const portfolioData = [
   {
     thumbnail: calculator,
     name: "calculator",
-    description: "A simple calculator for mobile that performs just addition, subtraction, multiplication and division",
+    description: "A simple calculator for mobile that performs just addition, subtraction, multiplication and division. Also with dark and light theme.",
     link: "https://olas-calculator.netlify.app/",
     tools: ["HTML", "CSS", "Vanilla JS"],
     column: "2/3",

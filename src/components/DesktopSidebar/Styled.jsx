@@ -74,11 +74,7 @@ export const SidebarStyled = styled.section`
     border-radius: 5px;
   }
 
-  @media screen and (max-width: 840px) {
-    margin-right: 20px;
-  }
-
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;

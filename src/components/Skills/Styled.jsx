@@ -24,7 +24,7 @@ export const SkillsStyled = styled.section`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     background: #fff;
     z-index: 1;
     padding: 2rem 1rem;
