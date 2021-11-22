@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { ContactStyled } from "./Styled";
 import { useFormik } from "formik";
 import { ReactComponent as Mail } from "../../assets/icons/mail.svg";
@@ -57,6 +57,15 @@ const Contact = ({ toggle }) => {
     });
   }, []);
 
+
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if ( window.location.search.includes('success=true') ) {
+      setSuccess(true);
+    }
+  }, []);
+
   return (
     <ContactStyled
       id="contact"
@@ -74,10 +83,10 @@ const Contact = ({ toggle }) => {
         <form
           data-aos="fade-up"
           name="portfolio-v2"
-          data-netlify="true"
           method="POST"
+          action="/?success=true"
+          data-netlify="true"
           data-netlify-honeypot="bot-field"
-          onSubmit="submit"
         >
           <input type="hidden" name="form-name" value="portfolio-v2" />
           <div hidden><input name="bot-field" /></div>
