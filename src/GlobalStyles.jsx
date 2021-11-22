@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
     html, body {
         width: 100vw;
         overflow-x: hidden;
+        scroll-behavior: smooth;
     }
 
     a {

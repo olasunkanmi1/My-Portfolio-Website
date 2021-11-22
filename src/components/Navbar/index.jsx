@@ -12,6 +12,17 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    const target = e.target.getAttribute("href")
+    const location = document.querySelector(target).offsetTop
+    
+    window.scrollTo({
+      left: 0,
+      top: location - 85,
+    })
+  }
+
   return (
     <>
       <NavbarStyled isOpen={isOpen}>
@@ -30,7 +41,7 @@ const Navbar = () => {
         >
           {menuData.map((link) => (
             <li className="menu-link" key={link.title}>
-              <a href={`#${link.title}`}>{link.title}</a>
+              <a href={`#${link.title}`} onClick={handleClick}>{link.title}</a>
             </li>
           ))}
         </Scrollspy>

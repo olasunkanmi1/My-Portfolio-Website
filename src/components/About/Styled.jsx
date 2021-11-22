@@ -90,10 +90,10 @@ export const AboutStyled = styled.section`
   }
 
   @media screen and (max-width: 1024px) {
+    margin-top: 85px;
     background: #fff;
     z-index: 1;
     padding: 2rem 1rem;
-    margin-bottom: 2rem;
     border-radius: 5px;
   }
 `;

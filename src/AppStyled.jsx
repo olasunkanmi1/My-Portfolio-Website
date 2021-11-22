@@ -24,7 +24,7 @@ export const AppStyled = styled.body`
       flex-direction: column;
       overflow-y: scroll;
       background-image: none;
-      margin-top: 4rem;
+      /* margin-top: 4rem; */
       height: auto;
     }
 

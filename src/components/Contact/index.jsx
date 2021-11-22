@@ -92,9 +92,9 @@ const Contact = ({ toggle }) => {
               placeholder="Name"
               required
             />
-            {formik.touched.name && formik.errors.name && (
+            {/* {formik.touched.name && formik.errors.name && (
               <p>{formik.errors.name}</p>
-            )}
+            )} */}
           </div>
 
           <div>
@@ -107,9 +107,9 @@ const Contact = ({ toggle }) => {
               placeholder="Email"
               required
             />
-            {formik.touched.email && formik.errors.email && (
+            {/* {formik.touched.email && formik.errors.email && (
               <p>{formik.errors.email}</p>
-            )}
+            )} */}
           </div>
 
           <div>
@@ -124,9 +124,9 @@ const Contact = ({ toggle }) => {
               placeholder="Message"
               required
             />
-            {formik.touched.message && formik.errors.message && (
+            {/* {formik.touched.message && formik.errors.message && (
               <p>{formik.errors.message}</p>
-            )}
+            )} */}
           </div>
           <button type="submit">SUBMIT</button>
         </form>
