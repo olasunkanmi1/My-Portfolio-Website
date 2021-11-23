@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const ModalStyled = styled.div`
-    background: transparent;
+    background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,22 +10,23 @@ export const ModalStyled = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 999;
 
     .wrap {
         display: flex;
         flex-direction: column;
-        padding: 15px;
+        padding: 10px;
         align-items: center;
         justify-content: center;
         text-align: center;
-        width: 100vw;
+        width: 95%;
         position: fixed;
         top: 50%;
-        transform: translateY(-50%);
+        left: 50%;
+        transform: translate(-50%, -50%);
         color: #fff;
         box-shadow: var(--primary) 0px 3px 8px;
-        z-index: 99;
+        z-index: 999;
         background: #fff;
 
         .close {
@@ -57,6 +58,21 @@ export const ModalStyled = styled.div`
           font-size: 17px;
           font-weight: 600;
           color: #000;
+        }
+
+        a {
+            color: var(--primary);
+            font-size: 17px;
+            font-weight: 600;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+                width: 25px;
+                margin-right: 5px;
+            }
         }
     }
 `

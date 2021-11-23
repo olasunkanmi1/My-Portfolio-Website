@@ -9,7 +9,6 @@ import { ReactComponent as Twitter } from "../../assets/icons/twitter.svg";
 import { ReactComponent as Github } from "../../assets/icons/github.svg";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Modal from "../Modal";
 
 const initialValues = {
   name: "",
@@ -56,15 +55,6 @@ const Contact = ({ toggle }) => {
       duration: 1000,
       offset: 50,
     });
-  }, []);
-
-  const [success, setSuccess] = useState(false)
-  const [showModal, setShowModal] = useState(false);
-
-  useEffect(() => {
-    if ( window.location.search.includes('success=true') ) {
-      setSuccess(true);
-    }
   }, []);
 
   return (
@@ -186,8 +176,6 @@ const Contact = ({ toggle }) => {
           </div>
         </div>
       </div>
-
-      { success && <Modal success={success} setSuccess={setSuccess} /> }
     </ContactStyled>
   );
 };
