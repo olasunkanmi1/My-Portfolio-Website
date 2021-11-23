@@ -17,27 +17,34 @@ export const ModalStyled = styled.div`
         flex-direction: column;
         padding: 15px;
         align-items: center;
-        justify-content: space-between;
-        width: 300px;
+        justify-content: center;
+        text-align: center;
+        width: 100vw;
         position: fixed;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translateY(-50%);
         color: #fff;
         box-shadow: var(--primary) 0px 3px 8px;
         z-index: 99;
+        background: #fff;
 
         .close {
             width: 30px;
+            height: 30px;
             position: absolute;
             right: 15px;
             top: 15px;
             cursor: pointer;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
         }
 
         img {
-            width: 50px;
-            height: 50px;
+            width: 100px;
+            height: 100px;
             margin: 30px 0 20px 0;
         }
 

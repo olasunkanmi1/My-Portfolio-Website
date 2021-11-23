@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import GlobalStyles from "./GlobalStyles";
 import { AppStyled } from "./AppStyled";
 
@@ -11,12 +11,6 @@ function App() {
   const changeTab = (index) => {
     setToggle(index);
   }
-
-  useEffect(() => {
-    if(window.innerWidth <= 1024) {
-      setToggle(2);
-    }
-  }, [])
 
   return (
     <AppStyled>

@@ -46,6 +46,7 @@ export const SidebarStyled = styled.section`
     padding: 15px 10px;
     margin-bottom: 20px;
     position: relative;
+    text-align: center;
   }
 
   .menu-link a {
@@ -53,6 +54,7 @@ export const SidebarStyled = styled.section`
     font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;
+    width: 100%;
   }
 
   .menu-link a:hover {

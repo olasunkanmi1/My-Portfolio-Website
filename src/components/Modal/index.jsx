@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { ModalStyled } from './Styled';
-import success from "../../assets/success.png";
+import check from "../../assets/success.png";
+import { ReactComponent as Close } from "../../assets/icons/cancel.svg";
 
 const Modal = ({ success, setSuccess }) => {
     const modalRef = useRef();
@@ -16,8 +17,9 @@ const Modal = ({ success, setSuccess }) => {
             { success && (
                 <ModalStyled ref={modalRef} onClick={closeModal}>
                     <div className="wrap">
-                        <div className="close" onClick={() => setSuccess(!setSuccess)}>close</div>
-                        <img src={success} alt="success" />
+                        <div className="close" onClick={() => setSuccess(!setSuccess)}> <Close /> </div>
+
+                        <img src={check} alt="successful" />
                         <h2>Thank You For Your Submission!</h2>
                         <p>I will get back to you as soon as possible.</p>
                     </div> 

@@ -58,17 +58,12 @@ const Contact = ({ toggle }) => {
     });
   }, []);
 
-  const [success, setSuccess] = useState(false);
+  const [success, setSuccess] = useState(false)
   const [showModal, setShowModal] = useState(false);
-
-  const showConfirmation = () => {
-    setShowModal(true)
-  }
 
   useEffect(() => {
     if ( window.location.search.includes('success=true') ) {
       setSuccess(true);
-      setShowModal(true);
     }
   }, []);
 

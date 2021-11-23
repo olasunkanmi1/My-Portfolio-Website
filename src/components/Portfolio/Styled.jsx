@@ -117,6 +117,16 @@ export const PortfolioStyled = styled.section`
       }
     }
 
+    /* :nth-child(5) {
+      .card {
+
+          img {
+          width: 400px;
+          height: 200px;
+        }
+      }
+    } */
+
     .tools {
       display: flex;
       align-items: center;
