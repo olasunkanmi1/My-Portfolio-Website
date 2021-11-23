@@ -145,6 +145,8 @@ export const NavbarStyled = styled.section`
 
   .back-to-top {
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     bottom: 40rem;
     right: 20px;
@@ -157,19 +159,11 @@ export const NavbarStyled = styled.section`
     opacity: 0;
     transition: 0.5s ease-in-out;
 
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-
-      svg {
-        position: absolute;
-        bottom: 0;
-        width: 85%;
-        animation: top 2s infinite;
-      }
+    svg {
+      position: absolute;
+      bottom: 0;
+      width: 85%;
+      animation: top 2s infinite;
     }
   }
 

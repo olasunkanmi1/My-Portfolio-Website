@@ -4,9 +4,8 @@ import me from "../../assets/me.jpeg";
 import { init } from "ityped";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Modal from "../Modal";
 
-const Home = ({ toggle, success, setSuccess }) => {
+const Home = ({ toggle }) => {
   const textRef = useRef();
 
   useEffect(() => {
@@ -69,8 +68,6 @@ const Home = ({ toggle, success, setSuccess }) => {
           </div>
         </div>
       </div>
-      
-      { success && <Modal success={success} setSuccess={setSuccess} /> }
     </HomeStyled>
   );
 };

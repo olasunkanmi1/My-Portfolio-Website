@@ -64,13 +64,14 @@ export const ModalStyled = styled.div`
             color: var(--primary);
             font-size: 17px;
             font-weight: 600;
+            margin-top: 10px;
             padding: 15px;
             display: flex;
             justify-content: center;
             align-items: center;
 
             svg {
-                width: 25px;
+                width: 18px;
                 margin-right: 5px;
             }
         }

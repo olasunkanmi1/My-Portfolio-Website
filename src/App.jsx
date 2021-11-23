@@ -3,7 +3,7 @@ import GlobalStyles from "./GlobalStyles";
 import { AppStyled } from "./AppStyled";
 
 //components
-import { About, Contact, DesktopSidebar, Home, Navbar, Portfolio, Skills } from "./components";
+import { About, Contact, DesktopSidebar, Home, Modal, Navbar, Portfolio, Skills } from "./components";
 
 function App() {
   const [toggle, setToggle] = useState(1);
@@ -18,7 +18,6 @@ function App() {
       setToggle(null);
     }
   }, []);
-
   
   useEffect(() => {
     if ( window.location.search.includes('success=true') ) {
@@ -35,12 +34,14 @@ function App() {
       <div className="view">
         <DesktopSidebar toggle={toggle} changeTab={changeTab} />
         
-        <Home toggle={toggle} success={success} setSuccess={setSuccess} />
+        <Home toggle={toggle} />
         <About toggle={toggle} />
         <Skills toggle={toggle} />
         <Portfolio toggle={toggle} />
         <Contact toggle={toggle} />
       </div>
+
+      { success && <Modal success={success} setSuccess={setSuccess} /> }
     </AppStyled>
   );
 }

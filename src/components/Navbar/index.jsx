@@ -5,6 +5,7 @@ import Scrollspy from "react-scrollspy";
 import { menuData } from "../../data/MenuData";
 import Sidebar from "../Sidebar";
 import { ReactComponent as Top } from "../../assets/icons/top.svg";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +16,7 @@ const Navbar = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
+    
     const target = e.target.getAttribute("href")
     const location = document.querySelector(target).offsetTop
     
@@ -47,13 +49,15 @@ const Navbar = () => {
         >
           {menuData.map((link) => (
             <li className="menu-link" key={link.title}>
-              <a href={`#${link.title}`} onClick={handleClick}>{link.title}</a>
+              <a href={`#${link.title}`} onClick={handleClick}>
+                <Link to={link.title} smooth={true} duration={1000}>{link.title}</Link>
+              </a>
             </li>
           ))}
         </Scrollspy>
 
-        <div className="back-to-top">
-          <a href="#home"> <Top /> </a>
+        <div className="back-to-top" onClick={() => scroll.scrollToTop()}>
+          <Top />
         </div>
       </NavbarStyled>
       <Sidebar isOpen={isOpen} toggle={toggle} />
