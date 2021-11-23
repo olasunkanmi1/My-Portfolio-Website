@@ -143,7 +143,56 @@ export const NavbarStyled = styled.section`
     /* transition: 0.2s ease-in-out; */
   }
 
+  .back-to-top {
+    display: flex;
+    position: fixed;
+    bottom: 40rem;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: #F92524;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      svg {
+        position: absolute;
+        bottom: 0;
+        width: 85%;
+        animation: top 2s infinite;
+      }
+    }
+  }
+
+  .back-to-top.active {
+    visibility: visible;
+    opacity: 0.6;
+    bottom: 40px;
+  }
+
   @media screen and (min-width: 1024px) {
     display: none;
+  }
+
+  @keyframes top {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-0.5rem);
+    }
   }
 `;

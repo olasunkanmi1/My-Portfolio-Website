@@ -84,7 +84,7 @@ export const PortfolioStyled = styled.section`
           .tools-visible {
             display: none;
 
-            @media screen and (max-width: 955px) {
+            @media screen and (max-width: 768px) {
               display: flex;
             }
           }
@@ -154,7 +154,7 @@ export const PortfolioStyled = styled.section`
       }
     }
 
-    @media screen and (max-width: 955px) {
+    @media screen and (max-width: 768px) {
       display: flex;
 
       .card {

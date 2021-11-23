@@ -111,7 +111,8 @@ export const ContactStyled = styled.section`
 
         div {
           flex-direction: row;
-        flex-wrap: wrap;
+          justify-content: center;
+          flex-wrap: wrap;
 
           a {
             margin-right: 15px;

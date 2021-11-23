@@ -107,25 +107,21 @@ export const AppStyled = styled.body`
         border-radius: 5px;
       }
 
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        background: #fff;
+        border: none;
+        border-radius: 5px;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        overflow-y: hidden;
+      }
+
       @media screen and (max-width: 840px) {
         padding: 2rem 1.5rem;
       }
-    }
-  }
-
-  .back-to-top {
-    display: none;
-
-    @media screen and (max-width: 1024px) {
-      display: flex;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 30px;
-      height: 30px;
-      justify-content: center;
-      align-items: center;
-      background: var(--secondary);
     }
   }
 `;

@@ -4,6 +4,7 @@ import logo from "../../assets/logo.png";
 import Scrollspy from "react-scrollspy";
 import { menuData } from "../../data/MenuData";
 import Sidebar from "../Sidebar";
+import { ReactComponent as Top } from "../../assets/icons/top.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +23,11 @@ const Navbar = () => {
       top: location - 85,
     })
   }
+
+  window.addEventListener('scroll', function() {
+    let scroll = document.querySelector('.back-to-top')
+    scroll.classList.toggle("active" , window.scrollY > 600)
+  });
 
   return (
     <>
@@ -45,6 +51,10 @@ const Navbar = () => {
             </li>
           ))}
         </Scrollspy>
+
+        <div className="back-to-top">
+          <a href="#home"> <Top /> </a>
+        </div>
       </NavbarStyled>
       <Sidebar isOpen={isOpen} toggle={toggle} />
     </>

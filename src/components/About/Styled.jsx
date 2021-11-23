@@ -87,6 +87,14 @@ export const AboutStyled = styled.section`
     .cv {
       background: var(--primary);
     }
+
+    @media screen and (max-width: 370px) {
+      flex-direction: column;
+
+      .mail {
+        margin: 0 0 15px 0;
+      }
+    }
   }
 
   @media screen and (max-width: 1024px) {

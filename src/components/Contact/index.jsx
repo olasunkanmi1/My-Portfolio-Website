@@ -95,47 +95,47 @@ const Contact = ({ toggle }) => {
             <input
               type="text"
               name="name"
-              // onChange={formik.handleChange}
-              // onBlur={formik.handleBlur}
-              // value={formik.values.name}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.name}
               placeholder="Name"
               required
             />
-            {/* {formik.touched.name && formik.errors.name && (
+            {formik.touched.name && formik.errors.name && (
               <p>{formik.errors.name}</p>
-            )} */}
+            )}
           </div>
 
           <div>
             <input
               type="email"
               name="email"
-              // onChange={formik.handleChange}
-              // onBlur={formik.handleBlur}
-              // value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.email}
               placeholder="Email"
               required
             />
-            {/* {formik.touched.email && formik.errors.email && (
+            {formik.touched.email && formik.errors.email && (
               <p>{formik.errors.email}</p>
-            )} */}
+            )}
           </div>
 
           <div>
             <textarea
               name="message"
-              // onChange={formik.handleChange}
-              // onBlur={formik.handleBlur}
-              // value={formik.values.message}
-              // id=""
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              value={formik.values.message}
+              id=""
               cols="30"
               rows="10"
               placeholder="Message"
               required
             />
-            {/* {formik.touched.message && formik.errors.message && (
+            {formik.touched.message && formik.errors.message && (
               <p>{formik.errors.message}</p>
-            )} */}
+            )}
           </div>
           <button type="submit">SUBMIT</button>
         </form>
