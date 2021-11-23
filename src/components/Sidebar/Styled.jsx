@@ -49,7 +49,7 @@ export const SidebarStyled = styled.section`
     text-align: center;
   }
 
-  .menu-link a {
+  .menu-link .link {
     transition: 0.3s;
     font-size: 16px;
     font-weight: 500;
@@ -57,7 +57,7 @@ export const SidebarStyled = styled.section`
     width: 100%;
   }
 
-  .menu-link a:hover {
+  .menu-link .link:hover {
     color: var(--secondary);
   }
 
@@ -65,7 +65,7 @@ export const SidebarStyled = styled.section`
     margin-bottom: 0;
   }
 
-  .current a {
+  .current .link {
     color: var(--secondary);
     font-weight: 600;
   }

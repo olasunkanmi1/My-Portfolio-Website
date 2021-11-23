@@ -14,17 +14,16 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleClick = (e) => {
-    e.preventDefault();
+  // const handleClick = (e) => {
+
+  //   const target = e.target.getAttribute("to")
+  //   const location = document.querySelector(target).offsetTop
     
-    const target = e.target.getAttribute("href")
-    const location = document.querySelector(target).offsetTop
-    
-    window.scrollTo({
-      left: 0,
-      top: location - 85,
-    })
-  }
+  //   window.scrollTo({
+  //     left: 0,
+  //     top: location - 85,
+  //   })
+  // }
 
   window.addEventListener('scroll', function() {
     let scroll = document.querySelector('.back-to-top')
@@ -49,16 +48,12 @@ const Navbar = () => {
         >
           {menuData.map((link) => (
             <li className="menu-link" key={link.title}>
-              <a href={`#${link.title}`} onClick={handleClick}>
-                <Link to={link.title} smooth={true} duration={1000}>{link.title}</Link>
-              </a>
+                <Link to={link.title} smooth={true} duration={1000} className="link">{link.title}</Link>
             </li>
           ))}
         </Scrollspy>
 
-        <div className="back-to-top" onClick={() => scroll.scrollToTop()}>
-          <Top />
-        </div>
+        <div className="back-to-top" onClick={() => scroll.scrollToTop()}> <Top /> </div>
       </NavbarStyled>
       <Sidebar isOpen={isOpen} toggle={toggle} />
     </>

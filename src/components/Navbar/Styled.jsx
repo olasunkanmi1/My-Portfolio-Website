@@ -7,8 +7,8 @@ export const NavbarStyled = styled.section`
   height: 85px;
   width: 100%;
   z-index: 10;
-  position: fixed;
-  top: 0;
+  /* position: fixed;
+  top: 0; */
   padding: 0rem 10rem;
   background: #fff;
 
@@ -113,14 +113,14 @@ export const NavbarStyled = styled.section`
     position: relative;
   }
 
-  .menu-link a {
+  .menu-link .link {
     transition: 0.3s;
     font-size: 16px;
     font-weight: 500;
     text-transform: capitalize;
   }
 
-  .menu-link a:hover {
+  .menu-link .link:hover {
     color: var(--secondary);
   }
 
@@ -128,7 +128,7 @@ export const NavbarStyled = styled.section`
     margin-right: 0;
   }
   
-  .current a {
+  .current .link {
     color: var(--secondary);
     font-weight: 600;
   }

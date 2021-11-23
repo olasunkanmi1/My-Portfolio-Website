@@ -2,18 +2,19 @@ import React from "react";
 import { SidebarStyled } from "./Styled";
 import Scrollspy from "react-scrollspy";
 import { menuData } from "../../data/MenuData";
+import { Link } from "react-scroll";
 
 const Sidebar = ({ isOpen, toggle }) => {
-  const handleClick = (e) => {
-    e.preventDefault();
-    const target = e.target.getAttribute("href")
-    const location = document.querySelector(target).offsetTop
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  //   const target = e.target.getAttribute("href")
+  //   const location = document.querySelector(target).offsetTop
     
-    window.scrollTo({
-      left: 0,
-      top: location - 85,
-    })
-  }
+  //   window.scrollTo({
+  //     left: 0,
+  //     top: location - 85,
+  //   })
+  // }
 
   return (
     <SidebarStyled isOpen={isOpen} onClick={toggle}>
@@ -23,8 +24,8 @@ const Sidebar = ({ isOpen, toggle }) => {
         currentClassName="current"
       >
         {menuData.map((link) => (
-          <li className="menu-link" key={link.title} onClick={toggle}>
-            <a href={`#${link.title}`} onClick={handleClick}>{link.title}</a>
+          <li className="menu-link" key={link.title}>
+            <Link to={link.title} smooth={true} duration={1000} onClick={toggle} className="link">{link.title}</Link>
           </li>
         ))}
       </Scrollspy>
