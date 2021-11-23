@@ -17,10 +17,10 @@ export const HomeStyled = styled.section`
   .ityped-cursor {
     font-size: 2.2rem;
     opacity: 1;
-    -webkit-animation: blink 0.3s infinite;
-    -moz-animation: blink 0.3s infinite;
-    animation: blink 0.3s infinite;
-    animation-direction: alternate;
+    -webkit-animation: blink 1s infinite;
+    -moz-animation: blink 1s infinite;
+    animation: blink 1s infinite;
+    color: var(--secondary);
   }
 
   @keyframes blink {

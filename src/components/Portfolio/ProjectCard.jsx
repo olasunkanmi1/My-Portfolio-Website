@@ -9,10 +9,7 @@ const ProjectCard = ({ thumbnail, name, description, column, link, drive, tools,
 
   return (
     <div className="wrapper" data-aos={fade} key={name}>
-      <div
-        className="card"
-        id
-        showDescription={showDescription}
+      <div className="card"
         style={{ gridColumn: `${column}`}}
       >
         <div className="thumbnail">
@@ -30,16 +27,17 @@ const ProjectCard = ({ thumbnail, name, description, column, link, drive, tools,
             </div>
           </div>
           {showDescription && (
-            <div className="description" showDescription={showDescription}>
+            <div className="description">
               <p>{description}</p>
               <div className="tools-visible">
                 {tools.map((tool) => (
                   <div>{tool}</div>
                 ))}
               </div>
-              <a href={drive} target="_blank" rel="noreferrer">
-                { link ? <> URL <Link /> </> :  <> DEMO <Play /> </> }
-              </a>
+              { link ? 
+                <a href={link} target="_blank" rel="noreferrer"> URL <Link /> </a> : 
+                <a href={drive} target="_blank" rel="noreferrer"> DEMO <Play /> </a>
+              }
             </div>
           )}
         </div>
