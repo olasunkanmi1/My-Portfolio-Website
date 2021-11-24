@@ -25,16 +25,17 @@ export const AppStyled = styled.body`
       flex-direction: column;
       overflow-y: scroll;
       background-image: none;
-      /* margin-top: 4rem; */
+      margin-top: 85px;
       height: auto;
+      padding-top: 1rem;
     }
 
     @media screen and (max-width: 1000px) {
-      padding: 4rem 7rem;
+      padding: 1rem 7rem;
     }
 
     @media screen and (max-width: 920px) {
-      padding: 4rem 6rem;
+      padding: 1rem 6rem;
     }
 
     @media screen and (max-width: 768px) {

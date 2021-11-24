@@ -7,16 +7,16 @@ import { ReactComponent as Back } from "../../assets/icons/back.svg";
 const Modal = ({ success, setSuccess }) => {
     const modalRef = useRef();
     
-    const closeModal = e => {
-        if (modalRef.current === e.target) {
-            setSuccess(false);
-        }
-    };
+    // const closeModal = e => {
+    //     if (modalRef.current === e.target) {
+    //         setSuccess(false);
+    //     }
+    // };
 
     return (
         <>
             { success && (
-                <ModalStyled ref={modalRef} onClick={closeModal}>
+                <ModalStyled ref={modalRef} >
                     <div className="wrap">
                         <div className="close" onClick={() => setSuccess(!setSuccess)}> <Close /> </div>
 

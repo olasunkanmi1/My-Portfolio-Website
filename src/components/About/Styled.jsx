@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const AboutStyled = styled.section`
+
   h1 {
     font-size: 30px;
     margin-bottom: 15px;
@@ -98,10 +99,11 @@ export const AboutStyled = styled.section`
   }
 
   @media screen and (max-width: 1024px) {
-    margin-top: 85px;
+    /* margin-top: 85px; */
     background: #fff;
     z-index: 1;
-    padding: 2rem 1rem;
-    border-radius: 5px;
+    padding: 2rem 1rem 0;
+    /* border-radius: 5px; */
+    padding-top: 95px;
   }
 `;

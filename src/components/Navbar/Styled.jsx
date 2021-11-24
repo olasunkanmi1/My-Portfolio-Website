@@ -7,8 +7,8 @@ export const NavbarStyled = styled.section`
   height: 85px;
   width: 100%;
   z-index: 10;
-  /* position: fixed;
-  top: 0; */
+  position: fixed;
+  top: 0;
   padding: 0rem 10rem;
   background: #fff;
 

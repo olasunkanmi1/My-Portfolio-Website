@@ -25,10 +25,11 @@ export const SkillsStyled = styled.section`
   }
 
   @media screen and (max-width: 1024px) {
-    margin-top: 85px;
+    /* margin-top: 85px; */
     background: #fff;
     z-index: 1;
     padding: 2rem 1rem;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    padding-top: 95px;
   }
 `;
