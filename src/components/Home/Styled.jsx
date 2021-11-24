@@ -283,19 +283,19 @@ export const HomeStyled = styled.section`
   }
 
   @-webkit-keyframes flip-left {
-    0% { transform: rotateX(0) rotateY(0) }
-    25% { transform: rotateX(180deg) rotateY(0) }
-    50% { transform: rotateX(180deg) rotateY(180deg) }
-    75% { transform: rotateX(0) rotateY(180deg) }
-    100% { transform: rotateX(0) rotateY(0) }
+    0% { -webkit-transform: rotateX(0) rotateY(0) }
+    25% { -webkit-transform: rotateX(180deg) rotateY(0) }
+    50% { -webkit-transform: rotateX(180deg) rotateY(180deg) }
+    75% { -webkit-transform: rotateX(0) rotateY(180deg) }
+    100% { -webkit-transform: rotateX(0) rotateY(0) }
   }
 
   @-moz-keyframes flip-left {
-    0% { transform: rotateX(0) rotateY(0) }
-    25% { transform: rotateX(180deg) rotateY(0) }
-    50% { transform: rotateX(180deg) rotateY(180deg) }
-    75% { transform: rotateX(0) rotateY(180deg) }
-    100% { transform: rotateX(0) rotateY(0) }
+    0% { -moz-transform: rotateX(0) rotateY(0) }
+    25% { -moz-transform: rotateX(180deg) rotateY(0) }
+    50% { -moz-transform: rotateX(180deg) rotateY(180deg) }
+    75% { -moz-transform: rotateX(0) rotateY(180deg) }
+    100% { -moz-transform: rotateX(0) rotateY(0) }
   }
 
   
@@ -308,18 +308,18 @@ export const HomeStyled = styled.section`
   }
 
   @-webkit-keyframes flip-right {
-    0% { transform: rotateX(0) rotateY(0) }
-    25% { transform: rotateX(0) rotateY(180deg) }
-    50% { transform: rotateX(180deg) rotateY(180deg) }
-    75% { transform: rotateX(180deg) rotateY(0) }
-    100% { transform: rotateX(0) rotateY(0) }
+    0% { -webkit-transform: rotateX(0) rotateY(0) }
+    25% { -webkit-transform: rotateX(0) rotateY(180deg) }
+    50% { -webkit-transform: rotateX(180deg) rotateY(180deg) }
+    75% { -webkit-transform: rotateX(180deg) rotateY(0) }
+    100% { -webkit-transform: rotateX(0) rotateY(0) }
   }
 
   @-moz-keyframes flip-right {
-    0% { transform: rotateX(0) rotateY(0) }
-    25% { transform: rotateX(0) rotateY(180deg) }
-    50% { transform: rotateX(180deg) rotateY(180deg) }
-    75% { transform: rotateX(180deg) rotateY(0) }
-    100% { transform: rotateX(0) rotateY(0) }
+    0% { -moz-transform: rotateX(0) rotateY(0) }
+    25% { -moz-transform: rotateX(0) rotateY(180deg) }
+    50% { -moz-transform: rotateX(180deg) rotateY(180deg) }
+    75% { -moz-transform: rotateX(180deg) rotateY(0) }
+    100% { -moz-transform: rotateX(0) rotateY(0) }
   }
 `;
