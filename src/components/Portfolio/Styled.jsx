@@ -207,17 +207,34 @@ export const PortfolioStyled = styled.section`
     }
   }
 
-  .dots {
+  .first, .second {
     display: none;
 
     @media screen and (max-width: 1024px) {
       display: flex;
       position: absolute;
-      height: 300px;
-      top: 350px;
-      right: 0;
+      height: 200px;
+      width: 200px;
       opacity: .7;
       z-index: 0;
+    }
+  }
+
+  .first {
+    top: 350px;
+    left: 0;
+
+    @media screen and (max-width: 450px) {
+      left: -32px;
+    }
+  }
+
+  .second {
+    bottom: 0;
+    right: 0;
+
+    @media screen and (max-width: 450px) {
+      right: -32px;
     }
   }
 

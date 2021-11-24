@@ -116,12 +116,17 @@ position: relative;
 
     @media screen and (max-width: 1024px) {
       display: flex;
-      /* height: 350px; */
+      height: 200px;
+      width: 200px;
       position: absolute;
-      top: 340px;
-      left: 0;
+      top: 295px;
+      right: 0;
       opacity: .7;
       z-index: 0;
+    }
+
+    @media screen and (max-width: 450px) {
+      right: -32px;
     }
   }
 

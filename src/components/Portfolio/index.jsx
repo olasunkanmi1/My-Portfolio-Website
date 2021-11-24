@@ -22,7 +22,8 @@ const Portfolio = ({ toggle }) => {
           <ProjectCard key={project.name} {...project} />
         ))}
 
-        <Dots className="dots"/>
+        <Dots className="first"/>
+        <Dots className="second"/>
     </PortfolioStyled>
   );
 };
