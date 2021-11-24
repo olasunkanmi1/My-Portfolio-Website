@@ -101,9 +101,9 @@ export const HomeStyled = styled.section`
 
         .square {
           div {
-            animation: flip-left 8s linear infinite;
             -webkit-animation: flip-left 8s infinite;
             -moz-animation: flip-left 8s infinite;
+            animation: flip-left 8s linear infinite;
             transform-origin: right bottom;
           }
           
@@ -121,9 +121,9 @@ export const HomeStyled = styled.section`
         .square {
 
           div {
-            animation: flip-right 8s linear infinite;
             -webkit-animation: flip-right 8s infinite;
             -moz-animation: flip-right 8s infinite;
+            animation: flip-right 8s linear infinite;
             transform-origin: right bottom;
           }
           

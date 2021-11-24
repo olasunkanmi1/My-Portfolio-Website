@@ -36,7 +36,7 @@ export const ContactStyled = styled.section`
           outline: none;
           border: 1px solid var(--primary);
           transition: 0.3s ease-in-out;
-          background: #eee;
+          background: #f2f2f2;
           resize: none;
 
           :focus {
@@ -69,6 +69,7 @@ export const ContactStyled = styled.section`
         :hover {
           background: var(--primary);
           color: #fff;
+          outline: none;
         }
       }
     }
