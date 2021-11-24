@@ -18,7 +18,7 @@ const Modal = ({ success, setSuccess }) => {
             { success && (
                 <ModalStyled ref={modalRef} >
                     <div className="wrap">
-                        <div className="close" onClick={() => setSuccess(!setSuccess)}> <Close /> </div>
+                        {/* <div className="close" onClick={() => setSuccess(!setSuccess)}> <Close /> </div> */}
 
                         <img src={check} alt="successful" />
                         <h2>Thank You For Your Submission!</h2>

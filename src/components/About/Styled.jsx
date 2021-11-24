@@ -4,7 +4,17 @@ export const AboutStyled = styled.section`
 
   h1 {
     font-size: 30px;
-    margin-bottom: 15px;
+    position: relative;
+    margin-bottom: 25px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      height: 3px;
+      background: var(--secondary);
+      width: 70px;
+    }
   }
   
   .wrap {

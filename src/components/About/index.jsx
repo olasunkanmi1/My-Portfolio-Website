@@ -17,7 +17,7 @@ const About = ({ toggle }) => {
       id="about"
       className={toggle === 2 ? "content active-content" : "content"}
     >
-      <h1>About Me</h1>
+      <h1 data-aos="fade-left">About Me</h1>
       <div className="wrap" data-aos="fade-left">
         {aboutData.map((item) => (
           <div className="card" data-aos="fade-up" key={item.title}>
