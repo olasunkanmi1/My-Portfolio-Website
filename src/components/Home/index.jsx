@@ -34,6 +34,7 @@ const Home = ({ toggle }) => {
       <div className="typing" ref={textRef} />
 
       <div className="wrap">
+
         <div className="info">
           <p>
             Hello 👋🏽, I'm an Enthusiastic Frontend Developer who is passionate
@@ -41,7 +42,7 @@ const Home = ({ toggle }) => {
           </p>
 
           <div className="animation">
-            <div class="line line-left"></div>
+            <div class="line line-left" />
             <a
               href="mailto:olasunkanmiaq@gmail.com"
               className="btn"
@@ -50,7 +51,7 @@ const Home = ({ toggle }) => {
             >
               Hire Me
             </a>
-            <div class="line line-right"></div>
+            <div class="line line-right" />
           </div>
         </div>
 

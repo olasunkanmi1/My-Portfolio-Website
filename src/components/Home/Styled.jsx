@@ -23,24 +23,6 @@ export const HomeStyled = styled.section`
     color: var(--secondary);
   }
 
-  @keyframes blink {
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @-webkit-keyframes blink {
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @-moz-keyframes blink {
-    100% {
-      opacity: 0;
-    }
-  }
-
   .wrap {
     display: flex;
     align-items: center;
@@ -74,36 +56,6 @@ export const HomeStyled = styled.section`
           -webkit-animation: grow 8s forwards;
           -moz-animation: grow 8s forwards;
           animation: grow 8s forwards;
-        }
-
-        @keyframes grow {
-          0% {
-            width: 0;
-          }
-          100% {
-            opacity: 1;
-            width: 100%;
-          }
-        }
-
-        @-webkit-keyframes grow {
-          0% {
-            width: 0;
-          }
-          100% {
-            opacity: 1;
-            width: 100%;
-          }
-        }
-
-        @-moz-keyframes grow {
-          0% {
-            width: 0;
-          }
-          100% {
-            opacity: 1;
-            width: 100%;
-          }
         }
       }
 
@@ -150,6 +102,8 @@ export const HomeStyled = styled.section`
         .square {
           div {
             animation: flip-left 8s linear infinite;
+            -webkit-animation: flip-left 8s infinite;
+            -moz-animation: flip-left 8s infinite;
             transform-origin: right bottom;
           }
           
@@ -168,6 +122,8 @@ export const HomeStyled = styled.section`
 
           div {
             animation: flip-right 8s linear infinite;
+            -webkit-animation: flip-right 8s infinite;
+            -moz-animation: flip-right 8s infinite;
             transform-origin: right bottom;
           }
           
@@ -219,6 +175,10 @@ export const HomeStyled = styled.section`
         width: 100%;
         order: 2;
         margin-top: 20px;
+
+        .animation {
+          padding-right: 0;
+        }
       }
 
       .image-container {
@@ -228,12 +188,21 @@ export const HomeStyled = styled.section`
   }
 
   @media screen and (max-width: 1024px) {
-    /* margin-top: 85px; */
     background: #fff;
     z-index: 1;
-    padding: 2rem 1rem 0;
-    /* border-radius: 5px; */
+    padding: 1rem;
     padding-top: 95px;
+    position: relative;
+    
+    ::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      height: 70px;
+      width: 105%;
+      background: #f2f2f2;
+    }
 
     .display {
         
@@ -254,6 +223,57 @@ export const HomeStyled = styled.section`
     }
   }
 
+  //animations
+  @keyframes blink {
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes blink {
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @-moz-keyframes blink {
+    100% {
+      opacity: 0;
+    }
+  }
+
+
+  @keyframes grow {
+    0% {
+      width: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+  @-webkit-keyframes grow {
+    0% {
+      width: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+  @-moz-keyframes grow {
+    0% {
+      width: 0;
+    }
+    100% {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+
   @keyframes flip-left {
     0% { transform: rotateX(0) rotateY(0) }
     25% { transform: rotateX(180deg) rotateY(0) }
@@ -261,8 +281,41 @@ export const HomeStyled = styled.section`
     75% { transform: rotateX(0) rotateY(180deg) }
     100% { transform: rotateX(0) rotateY(0) }
   }
+
+  @-webkit-keyframes flip-left {
+    0% { transform: rotateX(0) rotateY(0) }
+    25% { transform: rotateX(180deg) rotateY(0) }
+    50% { transform: rotateX(180deg) rotateY(180deg) }
+    75% { transform: rotateX(0) rotateY(180deg) }
+    100% { transform: rotateX(0) rotateY(0) }
+  }
+
+  @-moz-keyframes flip-left {
+    0% { transform: rotateX(0) rotateY(0) }
+    25% { transform: rotateX(180deg) rotateY(0) }
+    50% { transform: rotateX(180deg) rotateY(180deg) }
+    75% { transform: rotateX(0) rotateY(180deg) }
+    100% { transform: rotateX(0) rotateY(0) }
+  }
+
   
   @keyframes flip-right {
+    0% { transform: rotateX(0) rotateY(0) }
+    25% { transform: rotateX(0) rotateY(180deg) }
+    50% { transform: rotateX(180deg) rotateY(180deg) }
+    75% { transform: rotateX(180deg) rotateY(0) }
+    100% { transform: rotateX(0) rotateY(0) }
+  }
+
+  @-webkit-keyframes flip-right {
+    0% { transform: rotateX(0) rotateY(0) }
+    25% { transform: rotateX(0) rotateY(180deg) }
+    50% { transform: rotateX(180deg) rotateY(180deg) }
+    75% { transform: rotateX(180deg) rotateY(0) }
+    100% { transform: rotateX(0) rotateY(0) }
+  }
+
+  @-moz-keyframes flip-right {
     0% { transform: rotateX(0) rotateY(0) }
     25% { transform: rotateX(0) rotateY(180deg) }
     50% { transform: rotateX(180deg) rotateY(180deg) }

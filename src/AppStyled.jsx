@@ -25,7 +25,7 @@ export const AppStyled = styled.body`
       flex-direction: column;
       overflow-y: scroll;
       background-image: none;
-      margin-top: 85px;
+      margin-top: 15px;
       height: auto;
       padding-top: 1rem;
     }
@@ -69,7 +69,8 @@ export const AppStyled = styled.body`
       z-index: 0;
 
       @media screen and (max-width: 1024px) {
-        background: #eee;
+        background: #f2f2f2;
+        opacity: 1;
       }
     }
 

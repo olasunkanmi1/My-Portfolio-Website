@@ -109,11 +109,21 @@ export const AboutStyled = styled.section`
   }
 
   @media screen and (max-width: 1024px) {
-    /* margin-top: 85px; */
     background: #fff;
     z-index: 1;
-    padding: 2rem 1rem 0;
-    /* border-radius: 5px; */
+    padding: 1rem;
     padding-top: 95px;
+    position: relative;
+    
+    ::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      height: 50px;
+      width: 105%;
+      background: #f2f2f2;
+    }
+
   }
 `;
