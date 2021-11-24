@@ -10,7 +10,7 @@ const Home = ({ toggle }) => {
 
   useEffect(() => {
     init(textRef.current, {
-      strings: ["Frontend Developer 💻"],
+      strings: ["Frontend Developer"],
       typeSpeed: 80,
       backSpeed: 50,
       showCursor: false,
@@ -56,17 +56,17 @@ const Home = ({ toggle }) => {
         </div>
 
         <div className="image-container" data-aos="zoom-in">
-          <div className="display left">
+          {/* <div className="display left">
             <div className="square"> <div /> <div /> </div>
-          </div> 
+          </div>  */}
 
           <div className="img">
             <img src={me} alt="DP" />
           </div>
           
-          <div className="display right">
+          {/* <div className="display right">
             <div className="square"> <div /> <div /> </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </HomeStyled>
