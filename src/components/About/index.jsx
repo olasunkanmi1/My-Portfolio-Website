@@ -3,6 +3,7 @@ import { AboutStyled } from "./Styled";
 import { aboutData } from "../../data/AboutData";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { ReactComponent as Dots } from "../../assets/icons/dots.svg";
 
 const About = ({ toggle }) => {
   useEffect(() => {
@@ -58,6 +59,8 @@ const About = ({ toggle }) => {
           View Resume
         </a>
       </div>
+
+      <Dots className="dots" />
     </AboutStyled>
   );
 };

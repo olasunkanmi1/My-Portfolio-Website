@@ -25,6 +25,7 @@ export const PortfolioStyled = styled.section`
     grid-gap: 30px;
     place-items: center;
     margin: 2rem 0;
+    z-index: 1;
 
     :nth-child(odd) {
       grid-template-columns: 0.4fr 0.6fr;
@@ -203,6 +204,20 @@ export const PortfolioStyled = styled.section`
       .tools {
         display: none;
       }
+    }
+  }
+
+  .dots {
+    display: none;
+
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      position: absolute;
+      height: 300px;
+      top: 350px;
+      right: 0;
+      opacity: .7;
+      z-index: 0;
     }
   }
 

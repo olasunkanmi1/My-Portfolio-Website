@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const AboutStyled = styled.section`
+position: relative;
 
   h1 {
     font-size: 30px;
@@ -22,6 +23,7 @@ export const AboutStyled = styled.section`
     grid-gap: 15px;
     grid-template-columns: repeat(auto-fill, 200px);
     justify-content: space-evenly;
+    z-index: 1;
 
     .card {
       display: flex;
@@ -32,6 +34,7 @@ export const AboutStyled = styled.section`
       width: 200px;
       border-radius: 5px;
       box-shadow: var(--primary) 0px 3px 8px;
+      background: #fff;
 
       .svg {
         display: flex;
@@ -105,6 +108,20 @@ export const AboutStyled = styled.section`
       .mail {
         margin: 0 0 15px 0;
       }
+    }
+  }
+
+  .dots {
+    display: none;
+
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      /* height: 350px; */
+      position: absolute;
+      top: 340px;
+      left: 0;
+      opacity: .7;
+      z-index: 0;
     }
   }
 

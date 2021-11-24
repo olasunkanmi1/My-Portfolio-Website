@@ -4,6 +4,7 @@ import { portfolioData } from "../../data/PortfolioData";
 import ProjectCard from "./ProjectCard";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { ReactComponent as Dots } from "../../assets/icons/dots.svg";
 
 const Portfolio = ({ toggle }) => {
   useEffect(() => {
@@ -20,6 +21,8 @@ const Portfolio = ({ toggle }) => {
         {portfolioData.map((project) => (
           <ProjectCard key={project.name} {...project} />
         ))}
+
+        <Dots className="dots"/>
     </PortfolioStyled>
   );
 };
