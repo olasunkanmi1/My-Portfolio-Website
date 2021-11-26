@@ -29,7 +29,7 @@ const About = ({ toggle }) => {
         ))}
       </div>
       <p>
-        I'm a Lagos-based Junior Frontend Developer who is passionate about
+        I'm a Lagos-based Frontend Developer who is passionate about
         continuous learning as well as gaining real-world experience so as to
         accelerate my software development career. As a quick learner, I am
         capable of performing tasks at hand with little or no supervision.{" "}
