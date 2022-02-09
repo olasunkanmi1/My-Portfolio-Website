@@ -65,7 +65,7 @@ const Contact = ({ toggle }) => {
       <h2 data-aos="fade-left">Have a question or want to work together?</h2>
 
       <p data-aos="fade-up">
-        I'm actively seeking for a frontend development opportunity where I can
+        I'm available for a frontend development opportunity where I can
         contribute, learn and grow. Don't hesitate to reach out to me if you
         have any opportunity.
       </p>
@@ -142,7 +142,7 @@ const Contact = ({ toggle }) => {
             >
               <Mail />
             </a>
-            <a href="tel:2348100991565" target="_blank" rel="noreferrer">
+            <a href="tel:2349098419054" target="_blank" rel="noreferrer">
               <Phone />
             </a>
             <a
