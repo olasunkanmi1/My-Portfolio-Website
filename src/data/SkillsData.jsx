@@ -6,6 +6,7 @@ import { ReactComponent as React } from ".././assets/icons/react.svg";
 import { ReactComponent as Next } from ".././assets/icons/next.svg";
 import { ReactComponent as Bootstrap } from ".././assets/icons/bootstrap.svg";
 import { ReactComponent as Scss } from ".././assets/icons/scss.svg";
+import { ReactComponent as Tailwind } from ".././assets/icons/tailwind.svg";
 import { ReactComponent as Mui } from ".././assets/icons/mui.svg";
 import { ReactComponent as Git } from ".././assets/icons/git.svg";
 
@@ -18,6 +19,7 @@ export const SkillsData = [
   { svg: <Next />, name: "Next JS" },
   { svg: <Bootstrap />, name: "Bootstrap" },
   { svg: <Scss />, name: "SCSS" },
+  { svg: <Tailwind />, name: "Tailwind CSS" },
   { svg: <Mui />, name: "Material UI" },
   { svg: <Git />, name: "Git" },
 ];
