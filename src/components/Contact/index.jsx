@@ -160,7 +160,7 @@ const Contact = ({ toggle }) => {
               <Whatsapp />
             </a>
             <a
-              href="https://www.twitter.com/ola_szuko"
+              href="https://www.twitter.com/OlasunkanmiDev"
               target="_blank"
               rel="noreferrer"
             >
