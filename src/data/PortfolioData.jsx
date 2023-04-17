@@ -30,8 +30,8 @@ export const portfolioData = [
   {
     thumbnail: gmail,
     name: "gmail inboxpage clone",
-    description: "Cloned version of the Gmail showing the inbox page.",
-    drive: "https://drive.google.com/file/d/1yQb2o4UH5FR1X7gFWujQXfN3QZqraK3y/view?usp=sharing",
+    description: "A static cloned version of Gmail showing the inbox page.",
+    drive: "https://drive.google.com/file/d/1LU6T_Dr0bFePvwZWH9Z9V6jI6u1abi8k/view?usp=share_link",
     tools: ["HTML", "CSS", "Vanilla JS"],
     column: "1/2",
     fade: "fade-right"

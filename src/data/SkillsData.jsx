@@ -9,6 +9,9 @@ import { ReactComponent as Scss } from ".././assets/icons/scss.svg";
 import { ReactComponent as Tailwind } from ".././assets/icons/tailwind.svg";
 import { ReactComponent as Mui } from ".././assets/icons/mui.svg";
 import { ReactComponent as Git } from ".././assets/icons/git.svg";
+import { ReactComponent as Mongo } from ".././assets/icons/mongodb.svg";
+import { ReactComponent as Express } from ".././assets/icons/express.svg";
+import { ReactComponent as Node } from ".././assets/icons/node.svg";
 
 export const SkillsData = [
   { svg: <Html />, name: "HTML5" },
@@ -22,4 +25,7 @@ export const SkillsData = [
   { svg: <Tailwind />, name: "Tailwind CSS" },
   { svg: <Mui />, name: "Material UI" },
   { svg: <Git />, name: "Git" },
+  { svg: <Mongo />, name: "MongoDB" },
+  { svg: <Express />, name: "Express" },
+  { svg: <Node />, name: "Node.js" },
 ];
