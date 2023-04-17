@@ -51,7 +51,7 @@ const About = ({ toggle }) => {
           Get in touch
         </a>
         <a
-          href="https://drive.google.com/file/d/1WajTAixthi_-aI72srxbTmEqQJ2Rcyar/view?usp=share_link"
+          href="https://drive.google.com/file/d/14Yp989Vly5zm81iWWS38sAhXk8riOme8/view?usp=share_link"
           className="btn cv"
           target="_blank"
           rel="noreferrer"
