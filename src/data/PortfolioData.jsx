@@ -11,10 +11,10 @@ import calculator from "../assets/calc.png";
 export const portfolioData = [
   {
     thumbnail: pf,
-    name: "PropertyFinder v2",
-    description: "A real estate application created with Next JS using the Bayut API from RapidAPI to display properties available for-sale and for-rent in UAE with advanced property filtering. Authentication is work in progress...",
+    name: "PropertyFinder",
+    description: "A real estate application created with Next JS using the Bayut API from RapidAPI to display properties available for-sale and for-rent in UAE with advanced property filtering and many functionalities.",
     link: "https://propertyfinder.vercel.app/",
-    tools: ["Next.js", "Tailwind", "Typescript", "Mongo DB", "Express"],
+    tools: ["Next.js", "Tailwind", "Typescript", "Mongo DB", "Express", "Recoil"],
     column: "1/2",
     fade: "fade-right"
   },
@@ -58,7 +58,7 @@ export const portfolioData = [
   },
   {
     thumbnail: property,
-    name: "property finder",
+    name: "property finder v1",
     description:
       "Real estate agency website where users can see properties available for sale and for rent in Lagos.",
     link: "https://propertyfinder.netlify.app/",

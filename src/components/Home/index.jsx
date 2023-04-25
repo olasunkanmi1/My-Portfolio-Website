@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { HomeStyled } from "./Styled";
-import me from "../../assets/me.jpeg";
+import me from "../../assets/me.webp";
 import { init } from "ityped";
 import Aos from "aos";
 import "aos/dist/aos.css";
