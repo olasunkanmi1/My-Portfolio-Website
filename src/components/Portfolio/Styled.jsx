@@ -41,9 +41,14 @@ export const PortfolioStyled = styled.section`
       overflow: hidden;
       width: 100%;
       transition: .4s;
+      -webkit-transition: .4s;
+      -moz-transition: .4s;
 
       :hover {
         transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+
       }
 
       .thumbnail {
@@ -75,12 +80,20 @@ export const PortfolioStyled = styled.section`
 
           .up {
             transition: 0.2s;
+            -webkit-transition: .2s;
+            -moz-transition: .2s;
             transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
           }
 
           .down {
             transition: 0.2s;
+            -webkit-transition: 0.2s;
+            -moz-transition: 0.2s;
             transform: rotate(0deg);
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
           }
         }
 
@@ -111,6 +124,8 @@ export const PortfolioStyled = styled.section`
             color: var(--primary);
             font-weight: 600;
             transition: 0.5s ease-in-out;
+            -webkit-transition: 0.5s;
+            -moz-transition: 0.5s;
             cursor: pointer;
 
             svg {

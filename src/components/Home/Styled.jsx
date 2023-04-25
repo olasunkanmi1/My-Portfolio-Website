@@ -274,7 +274,6 @@ export const HomeStyled = styled.section`
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 0.5rem;
         padding-left: 0.5rem;
         width: 200px;
         height: 200px;
@@ -287,7 +286,7 @@ export const HomeStyled = styled.section`
         img {
           width: 130%;
           height: 130%;
-          transform: rotate(-45deg);
+          transform: rotate(-45deg) translateY(-30px);
         }
       }
     }

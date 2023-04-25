@@ -11,11 +11,17 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: "Raleway", sans-serif;
+        transition: all;
+        -webkit-transition: all;
+        -moz-transition: all;
     }
 
     html, body {
         width: 100vw;
         overflow-x: hidden;
+        transition: all;
+        -webkit-transition: all;
+        -moz-transition: all;
     }
 
     a {

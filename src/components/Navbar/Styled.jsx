@@ -77,6 +77,8 @@ export const NavbarStyled = styled.section`
     height: 3px;
     background: var(--primary);
     transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
     transform: ${({ isOpen }) =>
       isOpen ? "translateY(0px) rotate(45deg)" : "translateY(-10px)"};
   }
@@ -88,6 +90,8 @@ export const NavbarStyled = styled.section`
     height: 3px;
     background: var(--primary);
     transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
     transform: ${({ isOpen }) =>
       isOpen ? "translateY(0px) rotate(-45deg)" : "translateY(10px)"};
   }

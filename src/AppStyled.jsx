@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bg from "./assets/background.jpg";
+import bg from "./assets/background.webp";
 
 export const AppStyled = styled.body`
   display: flex;
@@ -65,7 +65,7 @@ export const AppStyled = styled.body`
       background: -webkit-radial-gradient(bottom left, #8b97bd, #ec7c7b);
       background: -moz-radial-gradient(bottom left, #8b97bd, #ec7c7b);
       background: radial-gradient(to top right, #8b97bd, #ec7c7b);
-      opacity: 0.5;
+      opacity: 0.8;
       z-index: 0;
 
       @media screen and (max-width: 1024px) {

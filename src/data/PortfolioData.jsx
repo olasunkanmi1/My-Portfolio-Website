@@ -1,12 +1,12 @@
-import pf from "../assets/pf2.png";
-import olastore from "../assets/olastore.png";
-import gmail from "../assets/gmail.png";
-import howbodi from "../assets/howbodi.png";
-import portfolio from "../assets/pf.png";
-import property from "../assets/property.png";
-import cashalat from "../assets/cashalat.png";
-import github from "../assets/github.png";
-import calculator from "../assets/calc.png";
+import pf from "../assets/pf2.webp";
+import olastore from "../assets/olastore.webp";
+import gmail from "../assets/gmail.webp";
+import howbodi from "../assets/howbodi.webp";
+import portfolio from "../assets/pf.webp";
+import property from "../assets/property.webp";
+import cashalat from "../assets/cashalat.webp";
+import github from "../assets/github.webp";
+import calculator from "../assets/calc.webp";
 
 export const portfolioData = [
   {
