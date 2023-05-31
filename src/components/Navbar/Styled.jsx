@@ -35,7 +35,7 @@ export const NavbarStyled = styled.section`
 
     @media screen and (max-width: 768px) {
       display: flex;
-      justify-content: center;
+      justify-content: end;
       align-items: center;
       width: 40px;
       height: 40px;

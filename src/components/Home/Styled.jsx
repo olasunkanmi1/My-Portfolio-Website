@@ -175,6 +175,13 @@ export const HomeStyled = styled.section`
       }
     }
   }
+  
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: 28px;
+      line-height: 35px;
+    }
+  }
 
   //animations
   @keyframes blink {

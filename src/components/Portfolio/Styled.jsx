@@ -8,7 +8,7 @@ export const PortfolioStyled = styled.section`
   h1 {
     font-size: 30px;
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 3rem;
 
     &:before {
       content: '';
@@ -20,15 +20,20 @@ export const PortfolioStyled = styled.section`
     }
   }
 
+  .cards_container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
   .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
     place-items: center;
-    margin: 2rem 0;
     z-index: 1;
 
-    :nth-child(odd) {
+    :nth-child(even) {
       .card {
         order: 2;
       }
@@ -128,7 +133,7 @@ export const PortfolioStyled = styled.section`
             justify-content: center;
             align-items: center;
             padding: 10px 15px;
-            outline: 2px solid var(--primary);
+            border: 2px solid var(--primary);
             border-radius: 5px;
             color: var(--primary);
             font-weight: 600;
@@ -145,7 +150,7 @@ export const PortfolioStyled = styled.section`
 
             :hover {
               background: var(--primary);
-              outline: none;
+              border: none;
               color: #fff;
             }
           }
@@ -179,7 +184,7 @@ export const PortfolioStyled = styled.section`
       grid-gap: 15px;
       grid-template-columns: 0.7fr 0.3fr;
 
-      :nth-child(odd) {
+      :nth-child(even) {
         grid-template-columns: 0.3fr 0.7fr;
       }
 
@@ -194,7 +199,7 @@ export const PortfolioStyled = styled.section`
       grid-template-columns: 1fr 1fr;
       padding: 0 2rem;
 
-      :nth-child(odd) {
+      :nth-child(even) {
         grid-template-columns: 1fr 1fr;
       }
     }
@@ -203,7 +208,7 @@ export const PortfolioStyled = styled.section`
       padding: 0 1rem;
       grid-template-columns: 0.6fr 0.4fr;
 
-      :nth-child(odd) {
+      :nth-child(even) {
         grid-template-columns: 0.4fr 0.6fr;
       }
     }
@@ -238,6 +243,10 @@ export const PortfolioStyled = styled.section`
         display: none;
       } 
     }
+
+    @media screen and (max-width: 400px) {
+      padding: 0 5px;
+    }
   }
 
   .first, .second {
@@ -254,7 +263,7 @@ export const PortfolioStyled = styled.section`
   }
 
   .first {
-    top: 289px;
+    top: 249px;
     left: -37px;
 
     @media screen and (max-width: 640px) {
@@ -263,7 +272,7 @@ export const PortfolioStyled = styled.section`
   }
 
   .second {
-    bottom: 503px;
+    bottom: 483px;
     right: -32px;
 
     @media screen and (max-width: 640px) {
