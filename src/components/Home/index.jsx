@@ -27,7 +27,7 @@ const Home = ({ toggle }) => {
 
         <div className="info">
           <p>
-            Hello 👋🏽, I'm a hightly motivated Frontend Developer with a strong enthusiasm for transforming ideas into captivating web experiences.
+            Hello 👋🏽, I'm a highly motivated Frontend Developer with a strong enthusiasm for transforming ideas into captivating web experiences.
           </p>
 
           <div className="animation">
