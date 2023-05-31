@@ -24,6 +24,11 @@ position: relative;
     grid-template-columns: repeat(auto-fill, 200px);
     justify-content: space-evenly;
     z-index: 1;
+    margin-top: 20px;
+
+    @media screen and (max-width: 465px) {
+      grid-template-columns: repeat(auto-fill, 170px);
+    }
 
     .card {
       display: flex;
@@ -31,10 +36,9 @@ position: relative;
       align-items: center;
       text-align: center;
       padding: 10px;
-      width: 200px;
-      border-radius: 5px;
+      border-radius: 10px;
       box-shadow: var(--primary) 0px 3px 8px;
-      background: #fff;
+      background: #fff;      
 
       .svg {
         display: flex;
@@ -63,6 +67,7 @@ position: relative;
       p {
         font-size: 16px;
         margin: 0;
+        text-align: center;
       }
     }
   }
@@ -71,6 +76,7 @@ position: relative;
     font-size: 18px;
     font-weight: 500;
     margin-top: 20px;
+    text-align: justify;
   }
 
   .buttons {
@@ -111,7 +117,7 @@ position: relative;
     }
   }
 
-  .dots {
+  .first, .second {
     display: none;
 
     @media screen and (max-width: 1024px) {
@@ -119,33 +125,44 @@ position: relative;
       height: 200px;
       width: 200px;
       position: absolute;
-      top: 295px;
-      right: 0;
       opacity: .7;
       z-index: 0;
     }
+  }
 
-    @media screen and (max-width: 450px) {
-      right: -32px;
+  .first {
+    top: 203px;
+    left: -37px;
+  }
+  
+  .second {
+    top: 303px;
+    right: -37px;
+  }
+
+  @media screen and (max-width: 717px) {
+    .first {
+      top: 243px;
+    }
+    
+    .second {
+      top: 503px;
+    }
+  }
+  
+  @media screen and (max-width: 640px) {
+    .first {
+      left: -17px;
+    }
+    
+    .second {
+      right: -17px;
     }
   }
 
-  @media screen and (max-width: 1024px) {
-    background: #fff;
-    z-index: 1;
-    padding: 1rem;
-    padding-top: 95px;
-    position: relative;
-    
-    ::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: "";
-      height: 50px;
-      width: 105%;
-      background: #f2f2f2;
+  @media screen and (max-width: 402px) {
+    .second {
+      top: 1283px;
     }
-
   }
 `;

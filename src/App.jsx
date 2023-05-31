@@ -1,48 +1,45 @@
-import { useState, useEffect } from "react"
+import { useState, useRef } from "react"
+import Aos from "aos";
 import GlobalStyles from "./GlobalStyles";
 import { AppStyled } from "./AppStyled";
+import "aos/dist/aos.css";
 
 //components
 import { About, Contact, DesktopSidebar, Home, Modal, Navbar, Portfolio, Skills } from "./components";
 
 function App() {
   const [toggle, setToggle] = useState(1);
-  const [success, setSuccess] = useState(false)
+  const [modal, setModal] = useState(false);
+  const viewRef = useRef(null);
+
+  Aos.init({
+    duration: 1000, 
+    offset: 50,
+  });
 
   const changeTab = (index) => {
     setToggle(index);
+    viewRef.current.scrollTop = 0 //back to top
   }
 
-  useEffect(() => {
-    if(window.innerWidth <= 1024) {
-      setToggle(null);
-    }
-  }, []);
-  
-  useEffect(() => {
-    if ( window.location.search.includes('success=true') ) {
-      setSuccess(true);
-    }
-  }, []);
-
   return (
-    <AppStyled>
-      <GlobalStyles />
-
-      <Navbar />
-
-      <div className="view">
+    <div onClick={() => setModal(false)}>
+      <AppStyled>
+        <GlobalStyles />
+        <Navbar />
         <DesktopSidebar toggle={toggle} changeTab={changeTab} />
-        
-        <Home toggle={toggle} />
-        <About toggle={toggle} />
-        <Skills toggle={toggle} />
-        <Portfolio toggle={toggle} />
-        <Contact toggle={toggle} />
-      </div>
+        <Modal modal={modal} setModal={setModal} />
 
-      { success && <Modal success={success} setSuccess={setSuccess} /> }
-    </AppStyled>
+        <div className="view" ref={viewRef}>
+            <Home toggle={toggle} />
+            <About toggle={toggle} />
+            <Skills toggle={toggle} />
+            <Portfolio toggle={toggle} />
+            <Contact toggle={toggle} setModal={setModal} />
+        </div>
+
+      </AppStyled>
+    </div>
   );
 }
 

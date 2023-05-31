@@ -2,8 +2,6 @@ import { useEffect, useRef } from "react";
 import { HomeStyled } from "./Styled";
 import me from "../../assets/me.webp";
 import { init } from "ityped";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 const Home = ({ toggle }) => {
   const textRef = useRef();
@@ -18,17 +16,9 @@ const Home = ({ toggle }) => {
     });
   }, []);
 
-  useEffect(() => {
-    Aos.init({
-      duration: 1000, 
-      offset: 50,
-    });
-  }, []);
-
   return (
-    <HomeStyled
-      id="home"
-      className={toggle === 1 ? "content active-content" : "content"}
+    <HomeStyled     
+      className={`content ${toggle === 1 ? "active-content" : ""}`}
     >
       <h1>Olasunkanmi Abdulsalam</h1>
       <div className="typing" ref={textRef} />
@@ -37,12 +27,11 @@ const Home = ({ toggle }) => {
 
         <div className="info">
           <p>
-            Hello 👋🏽, I'm an Enthusiastic Frontend Developer who is passionate
-            about bringing ideas to live in the browser.
+            Hello 👋🏽, I'm a hightly motivated Frontend Developer with a strong enthusiasm for transforming ideas into captivating web experiences.
           </p>
 
           <div className="animation">
-            <div class="line line-left" />
+            <div className="line line-left" />
             <a
               href="mailto:olasunkanmiaq@gmail.com"
               className="btn"
@@ -51,24 +40,17 @@ const Home = ({ toggle }) => {
             >
               Hire Me
             </a>
-            <div class="line line-right" />
+            <div className="line line-right" />
           </div>
         </div>
 
         <div className="image-container" data-aos="zoom-in">
-          {/* <div className="display left">
-            <div className="square"> <div /> <div /> </div>
-          </div>  */}
-
           <div className="img">
             <img src={me} alt="DP" />
           </div>
-          
-          {/* <div className="display right">
-            <div className="square"> <div /> <div /> </div>
-          </div> */}
         </div>
       </div>
+      <div id="home" className='tag' />
     </HomeStyled>
   );
 };

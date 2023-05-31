@@ -20,6 +20,18 @@ export const ContactStyled = styled.section`
       align-items: flex-end;
       width: 350px;
 
+      .submit_error {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #E65050;
+          color: #fff;
+          padding: 5px;
+          border-radius: 7px;
+          font-size: 16px;
+          margin: 0 0 15px;
+        }
+
       div {
         margin-bottom: 10px;
         width: 100%;
@@ -38,16 +50,22 @@ export const ContactStyled = styled.section`
           transition: 0.3s ease-in-out;
           background: #f2f2f2;
           resize: none;
+          border-radius: 5px;
 
           :focus {
             box-shadow: var(--primary) 0px 0px 5px;
           }
         }
-        p {
-          color: red;
-          font-size: 12px;
+        .error {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #E65050;
+          font-weight: 700;
+          font-size: 14px;
           margin: 3px 0;
         }
+        
       }
 
       button {
@@ -59,17 +77,17 @@ export const ContactStyled = styled.section`
         font-weight: 600;
         transition: 0.3s ease-in-out;
         cursor: pointer;
-        outline: 2px solid var(--primary);
+        outline: none;
         border: none;
         background: none;
         width: 100px;
-        border-radius: 3px;
-        color: var(--primary);
+        border-radius: 6px;
+        background: var(--primary);
+        color: #fff;
 
-        :hover {
-          background: var(--primary);
-          color: #fff;
-          outline: none;
+        :disabled {
+          background: rgb(20, 34, 81, .7);
+          cursor: not-allowed;
         }
       }
     }
@@ -114,30 +132,42 @@ export const ContactStyled = styled.section`
           flex-direction: row;
           justify-content: center;
           flex-wrap: wrap;
-
-          a {
-            margin-right: 15px;
-          }
+          gap: 15px;
         }
       }
     }
-  }
 
-  @media screen and (max-width: 1024px) {
-    background: #fff;
-    z-index: 1;
-    padding: 2rem 1rem;
-    padding-top: 95px;
-    position: relative;
-    
-    ::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: "";
-      height: 50px;
-      width: 105%;
-      background: #f2f2f2;
+    @media screen and (max-width: 1100px) {
+      flex-direction: row;
+
+      form {
+        width: 350px;
+      }
+
+      .links {
+        div {
+          flex-direction: column;
+        }
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      flex-direction: column;
+
+      form {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .links {
+
+        div {
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 15px;
+        }
+      }
     }
   }
 `;

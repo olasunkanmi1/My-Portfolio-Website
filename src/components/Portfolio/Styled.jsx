@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const PortfolioStyled = styled.section`
   display: flex;
   flex-direction: column;
+  position: relative;
 
   h1 {
     font-size: 30px;
@@ -21,25 +22,27 @@ export const PortfolioStyled = styled.section`
 
   .wrapper {
     display: grid;
-    grid-template-columns: 0.6fr 0.4fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
     place-items: center;
     margin: 2rem 0;
     z-index: 1;
 
     :nth-child(odd) {
-      grid-template-columns: 0.4fr 0.6fr;
+      .card {
+        order: 2;
+      }
     }
 
     .card {
       display: flex;
       flex-direction: column;
-      grid-row: 1/2;
       padding: 10px;
       background: #fff;
-      box-shadow: 0 0 10px 5px var(--primary);
+      box-shadow: 0 3px 8px var(--primary);
       overflow: hidden;
       width: 100%;
+      border-radius: 10px;
       transition: .4s;
       -webkit-transition: .4s;
       -moz-transition: .4s;
@@ -59,6 +62,7 @@ export const PortfolioStyled = styled.section`
         height: 200px;
         background: rgb(20, 34, 81, 0.9);
         overflow: hidden;
+        border-radius: 10px;
 
         img {
           width: 80%;
@@ -108,8 +112,13 @@ export const PortfolioStyled = styled.section`
 
           .tools-visible {
             display: none;
+            border-radius: 10px;
 
-            @media screen and (max-width: 768px) {
+            div {
+              border-radius: 5px;
+            }
+
+            @media screen and (max-width: 570px) {
               display: flex;
             }
           }
@@ -144,27 +153,17 @@ export const PortfolioStyled = styled.section`
       }
     }
 
-    /* :nth-child(5) {
-      .card {
-
-          img {
-          width: 400px;
-          height: 200px;
-        }
-      }
-    } */
-
     .tools {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      grid-row: 1/2;
-
+      
       div {
         font-size: 14px;
         margin: 0 10px 10px 0;
         color: #fff;
         padding: 10px;
+        border-radius: 5px;
 
         :nth-child(odd) {
           background: var(--secondary);
@@ -191,13 +190,32 @@ export const PortfolioStyled = styled.section`
       }
     }
 
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+      padding: 0 2rem;
+
+      :nth-child(odd) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
     @media screen and (max-width: 768px) {
-      display: flex;
+      padding: 0 1rem;
+      grid-template-columns: 0.6fr 0.4fr;
+
+      :nth-child(odd) {
+        grid-template-columns: 0.4fr 0.6fr;
+      }
+    }
+
+    @media screen and (max-width: 570px) {
+      display: block;
 
       .card {
 
         .tools-visible {
           flex-wrap: wrap;
+          justify-content: space-evenly;
 
           div {
             font-size: 14px;
@@ -218,7 +236,7 @@ export const PortfolioStyled = styled.section`
 
       .tools {
         display: none;
-      }
+      } 
     }
   }
 
@@ -236,39 +254,20 @@ export const PortfolioStyled = styled.section`
   }
 
   .first {
-    top: 350px;
-    left: 0;
+    top: 289px;
+    left: -37px;
 
-    @media screen and (max-width: 450px) {
-      left: -32px;
+    @media screen and (max-width: 640px) {
+      left: -17px;
     }
   }
 
   .second {
-    bottom: 0;
-    right: 0;
+    bottom: 503px;
+    right: -32px;
 
-    @media screen and (max-width: 450px) {
-      right: -32px;
-    }
-  }
-
-  @media screen and (max-width: 1024px) {
-    background: #fff;
-    z-index: 1;
-    padding: 2rem 1rem;
-    height: auto;
-    padding-top: 95px;
-    position: relative;
-    
-    ::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: "";
-      height: 50px;
-      width: 105%;
-      background: #f2f2f2;
+    @media screen and (max-width: 640px) {
+      right: -17px;
     }
   }
 `;

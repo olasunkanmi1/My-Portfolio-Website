@@ -12,6 +12,8 @@ import { ReactComponent as Git } from ".././assets/icons/git.svg";
 import { ReactComponent as Mongo } from ".././assets/icons/mongodb.svg";
 import { ReactComponent as Express } from ".././assets/icons/express.svg";
 import { ReactComponent as Node } from ".././assets/icons/node.svg";
+import { ReactComponent as Redux } from ".././assets/icons/redux.svg";
+import { ReactComponent as Recoil } from ".././assets/icons/recoil.svg";
 
 export const SkillsData = [
   { svg: <Html />, name: "HTML5" },
@@ -20,12 +22,14 @@ export const SkillsData = [
   { svg: <Ts />, name: "TypeScript" },
   { svg: <React />, name: "React JS" },
   { svg: <Next />, name: "Next JS" },
+  { svg: <Tailwind />, name: "Tailwind CSS" },
   { svg: <Bootstrap />, name: "Bootstrap" },
   { svg: <Scss />, name: "SCSS" },
-  { svg: <Tailwind />, name: "Tailwind CSS" },
   { svg: <Mui />, name: "Material UI" },
-  { svg: <Git />, name: "Git" },
   { svg: <Mongo />, name: "MongoDB" },
   { svg: <Express />, name: "Express" },
   { svg: <Node />, name: "Node.js" },
+  { svg: <Git />, name: "Git" },
+  { svg: <Redux />, name: "Redux" },
+  { svg: <Recoil />, name: "Recoil" },
 ];

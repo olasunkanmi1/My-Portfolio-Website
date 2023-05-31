@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const SkillsStyled = styled.section`
+gap: 30px;
+
   h1 {
     font-size: 30px;
     position: relative;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 
     &:before {
       content: '';
@@ -20,36 +22,37 @@ export const SkillsStyled = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 50px;
 
     .skill {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 25px;
+      /* padding: 25px; */
 
       svg {
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
         margin-bottom: 15px;
       }
     }
   }
 
+  .more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 3px;
+    background: var(--primary);
+    width: fit-content;
+    margin: auto;
+  }
+
   @media screen and (max-width: 1024px) {
     background: #fff;
     z-index: 1;
-    padding: 1rem;
-    padding-top: 95px;
-    position: relative;
-    
-    ::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: "";
-      height: 50px;
-      width: 105%;
-      background: #f2f2f2;
-    }
   }
 `;

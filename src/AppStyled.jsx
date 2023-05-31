@@ -1,129 +1,124 @@
 import styled from "styled-components";
-import bg from "./assets/background.webp";
+import bg from "./assets/background.png";
 
 export const AppStyled = styled.body`
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(${bg});
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4rem 10rem;
+
+  @media screen and (max-width: 1200px) {
+    padding: 4rem 8rem;
+  }
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    background-image: none;
+    height: auto;
+    padding: 0;
+  } 
 
   .view {
-    display: flex;
-    padding: 4rem 10rem;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 854px;
+    margin: auto;
+    max-height: 490px;
+    margin-left: calc((100vw - 1004px) / 2);
     position: relative;
-    background-image: url(${bg});
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border-radius: 10px;
+    gap: 4rem; 
+    padding: 2rem 3rem;
+    overflow: hidden;
+    overflow-y: auto;
 
-    @media screen and (max-width: 1200px) {
-      padding: 4rem 8rem;
+    @media screen and (max-width: 1345px) {
+      margin-left: 170px;
+      max-width: calc((100% - 20rem) + 150px);
     }
 
     @media screen and (max-width: 1024px) {
-      flex-direction: column;
-      overflow-y: scroll;
-      background-image: none;
-      margin-top: 15px;
-      height: auto;
-      padding-top: 1rem;
+      padding: 0;
+      margin: 0;
+      padding: 115px 0 20px;
+      /* height: fit-content; */
+      max-width: 100%;
+      background: none;
+      box-shadow: none;
+      gap: 40px; 
+      max-height: none;
+    background: #f2f2f2;
+      overflow: hidden;
     }
 
-    @media screen and (max-width: 1000px) {
-      padding: 1rem 7rem;
-    }
-
-    @media screen and (max-width: 920px) {
-      padding: 1rem 6rem;
-    }
-
-    @media screen and (max-width: 768px) {
-      padding: 1rem 5rem;
-    }
-
-    @media screen and (max-width: 600px) {
-      padding: 1rem 4rem;
-    }
-
-    @media screen and (max-width: 500px) {
-      padding: 1rem 3rem;
-    }
-
-    @media screen and (max-width: 450px) {
-      padding: 1rem 2rem;
-    }
-
-    :before {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      background: #8b97bd;
-      background: -webkit-radial-gradient(bottom left, #8b97bd, #ec7c7b);
-      background: -moz-radial-gradient(bottom left, #8b97bd, #ec7c7b);
-      background: radial-gradient(to top right, #8b97bd, #ec7c7b);
-      opacity: 0.8;
-      z-index: 0;
+    ::-webkit-scrollbar {
+      width: 10px;
 
       @media screen and (max-width: 1024px) {
-        background: #f2f2f2;
-        opacity: 1;
+        width: 0;
       }
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 5px;
+    }
+    
+    ::-moz-scrollbar {
+      width: 10px;
+
+      @media screen and (max-width: 1024px) {
+        width: 0;
+      }
+    }
+
+    ::-moz-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 5px;
     }
 
     .content {
       display: none;
+      position: relative;
+
+      .tag {
+        position: absolute;
+        top: -120px;
+        height: 100%;
+        background: transparent;
+      }
 
       @media screen and (max-width: 1024px) {
         display: flex;
         flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 10px;
+        margin: 0 32px;
+        padding: 20px 12px;
+        background: #fff;
+        z-index: 1;
       }
+
+      @media screen and (max-width: 640px) {
+        margin: 0 12px;
+      } 
     }
 
     .active-content {
       display: flex;
       flex-direction: column;
-      height: 100%;
-      width: 100vw;
-      padding: 2rem 3rem;
-      background: #fff;
-      overflow-x: hidden;
-      overflow-y: scroll;
-      border-radius: 5px;
-      background: rgba(255, 255, 255, 0.5);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(4.5px);
-      -webkit-backdrop-filter: blur(4.5px);
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: var(--primary);
-        border-radius: 5px;
-      }
-
-      @media screen and (max-width: 1024px) {
-        width: 100%;
-        height: auto;
-        box-shadow: none;
-        background: #fff;
-        border: none;
-        border-radius: 5px;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        overflow-y: hidden;
-      }
-
-      @media screen and (max-width: 840px) {
-        padding: 2rem 1.5rem;
-      }
     }
   }
 `;

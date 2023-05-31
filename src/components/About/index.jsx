@@ -1,22 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { AboutStyled } from "./Styled";
 import { aboutData } from "../../data/AboutData";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { ReactComponent as Dots } from "../../assets/icons/dots.svg";
 
 const About = ({ toggle }) => {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000, 
-      offset: 50,
-    });
-  }, []);
-
   return (
     <AboutStyled
-      id="about"
-      className={toggle === 2 ? "content active-content" : "content"}
+      className={`content ${toggle === 2 ? "active-content" : ""}`}
     >
       <h1 data-aos="fade-left">About Me</h1>
       <div className="wrap" data-aos="fade-left">
@@ -28,17 +18,14 @@ const About = ({ toggle }) => {
           </div>
         ))}
       </div>
-      <p>
-        I'm a Lagos-based Frontend Developer who is passionate about
-        continuous learning as well as gaining real-world experience so as to
-        accelerate my software development career. As a quick learner, I am
-        capable of performing tasks at hand with little or no supervision.{" "}
+      <p className='about'>
+        I'm an experienced frontend developer who is proficient in the use of React, Next.js, JavaScript, Typescript, and other various frontend libraries for developing scalable and responsive web applications. I'm also knowledgeable in MongoDB, Express, and Node.js for backend development. I collaborates effectively with cross-functional teams and I'm passionate about learning new technologies and staying current with industry trends. I've got a successful track record in delivering noteworthy projects that are well-received by clients and team members.
       </p>
 
-      <p>
+      <p className='about'>
         Additionally, as a highly motivated individual, I feel confident that my
-        skills set and dedication will enable me to become a valuable asset to
-        your project or organization.
+        skill set and dedication will enable me to become an asset to
+        your organization or project.
       </p>
 
       <div className="buttons">
@@ -51,7 +38,7 @@ const About = ({ toggle }) => {
           Get in touch
         </a>
         <a
-          href="https://drive.google.com/file/d/1riz_Px_ez0zqiFIsYszjVry2QwnkKvDh/view?usp=share_link"
+          href="https://drive.google.com/file/d/1LmdoaZqzcmAeH4ueKJtpbOS-JUbGmKmJ/view?usp=share_link"
           className="btn cv"
           target="_blank"
           rel="noreferrer"
@@ -60,7 +47,9 @@ const About = ({ toggle }) => {
         </a>
       </div>
 
-      <Dots className="dots" />
+      <Dots className="first" />
+      <Dots className="second" />
+      <div id="about" className='tag' />
     </AboutStyled>
   );
 };

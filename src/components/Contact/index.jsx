@@ -1,66 +1,71 @@
-import React, { useState, useEffect } from "react";
+import React, {useState} from "react";
 import { ContactStyled } from "./Styled";
-import { useFormik } from "formik";
+import { Form, Field, Formik, ErrorMessage } from 'formik'
+import * as Yup from 'yup';
 import { ReactComponent as Mail } from "../../assets/icons/mail.svg";
 import { ReactComponent as Phone } from "../../assets/icons/phone.svg";
 import { ReactComponent as Linkedin } from "../../assets/icons/linkedin.svg";
 import { ReactComponent as Whatsapp } from "../../assets/icons/whatsapp.svg";
-import { ReactComponent as Twitter } from "../../assets/icons/twitter.svg";
 import { ReactComponent as Github } from "../../assets/icons/github.svg";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
-const initialValues = {
-  name: "",
-  email: "",
-  message: "",
-};
+const Contact = ({ toggle, setModal }) => {
+  const[loading, setLoading] = useState(false);
+  const[error, setError] = useState(false);
 
-const onSubmit = (values) => {
-  console.log("Form Data", values);
-};
+  const initialValues = {
+    name: "",
+    email: "",
+    message: "",
+  };
 
-const validate = (values) => {
-  //values.name values.email values.message
-  //errors.name errors.email errors.message
+  const validationSchema = Yup.object({
+      name: Yup.string().required("Enter your name"),
+      email: Yup.string().email("Enter a Valid Email").required("Enter your email"),
+      message: Yup.string().required("Enter your message"),
+  });  
 
-  let errors = {};
+  const handleSubmit = async (values, {resetForm}) => {
+    setLoading(true);
 
-  if (!values.name) {
-    errors.name = "Required";
+    const res = await fetch(process.env.REACT_APP_CONTACT_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(values),
+    })
+
+    if(res.ok === true) {
+      setLoading(false)
+      setModal(true)
+      resetForm()
+      setError(false)
+    } else {
+      setLoading(false);
+      setError(true)
+    }
   }
 
-  if (!values.email) {
-    errors.email = "Required";
-  } else if (!/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/.test(values.email)) {
-    errors.email = "Enter a Valid Email";
+  const TextError = (props) => {
+    return (
+        <div className="error">
+            {props.children}
+        </div>
+    )
   }
 
-  if (!values.message) {
-    errors.message = "Required";
+  const SubmitError = () => {
+    return (
+        <div className="submit_error">
+            Unable to send message. Please try again
+        </div>
+    )
   }
-
-  return errors;
-};
-
-const Contact = ({ toggle }) => {
-  const formik = useFormik({
-    initialValues,
-    onSubmit,
-    validate,
-  });
-
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-      offset: 50,
-    });
-  }, []);
 
   return (
     <ContactStyled
       id="contact"
-      className={toggle === 5 ? "content active-content" : "content"}
+      className={`content ${toggle === 5 ? "active-content" : ""}`}  
     >
       <h2 data-aos="fade-left">Have a question or want to work together?</h2>
 
@@ -71,68 +76,31 @@ const Contact = ({ toggle }) => {
       </p>
 
       <div className="wrap">
-        <form
-          data-aos="fade-up"
-          name="portfolio-v2"
-          method="POST"
-          action="/?success=true"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-        >
-          <input type="hidden" name="form-name" value="portfolio-v2" />
-          <div hidden><input name="bot-field" /></div>
+      <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
+          <Form data-aos="fade-up">
+            {error && <SubmitError />}
 
-          <div>
-            <input
-              type="text"
-              name="name"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.name}
-              placeholder="Name"
-              required
-            />
-            {formik.touched.name && formik.errors.name && (
-              <p>{formik.errors.name}</p>
-            )}
-          </div>
+            <div>
+              <Field name="name" placeholder="Your Name" />
+              <ErrorMessage name='name' component={TextError} />
+            </div>
 
-          <div>
-            <input
-              type="email"
-              name="email"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.email}
-              placeholder="Email"
-              required
-            />
-            {formik.touched.email && formik.errors.email && (
-              <p>{formik.errors.email}</p>
-            )}
-          </div>
+            <div>
+              <Field name="email" placeholder="Your Email" inputMode='email' />
+              <ErrorMessage name='email' component={TextError} />
+            </div>
 
-          <div>
-            <textarea
-              name="message"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.message}
-              id=""
-              cols="30"
-              rows="10"
-              placeholder="Message"
-              required
-            />
-            {formik.touched.message && formik.errors.message && (
-              <p>{formik.errors.message}</p>
-            )}
-          </div>
-          <button type="submit">SUBMIT</button>
-        </form>
+            <div>
+              <Field name="message" as='textarea' rows="8" placeholder="Your Message" />
+              <ErrorMessage name='message' component={TextError} />
+            </div>
+
+            <button type="submit" disabled={loading}>{ loading ? 'Sending...' : 'SUBMIT'}</button>
+          </Form>
+        </Formik>
 
         <div className="links">
-          <h4>Connect with me via: </h4>
+          <h4> Get in touch </h4>
 
           <div>
             <a
@@ -142,7 +110,7 @@ const Contact = ({ toggle }) => {
             >
               <Mail />
             </a>
-            <a href="tel:2349098419054" target="_blank" rel="noreferrer">
+            <a href="tel:2349018175157" target="_blank" rel="noreferrer">
               <Phone />
             </a>
             <a
@@ -158,13 +126,6 @@ const Contact = ({ toggle }) => {
               rel="noreferrer"
             >
               <Whatsapp />
-            </a>
-            <a
-              href="https://www.twitter.com/OlasunkanmiDev"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Twitter />
             </a>
             <a
               href="https://www.github.com/olasunkanmi1"

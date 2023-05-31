@@ -9,35 +9,16 @@ export const NavbarStyled = styled.section`
   z-index: 10;
   position: fixed;
   top: 0;
+  left: 0;
   padding: 0rem 10rem;
   background: #fff;
 
-  @media screen and (max-width: 1200px) {
-    padding: 0 8rem;
+  @media screen and (max-width: 1024px) {
+    padding: 0 32px;
   }
 
-  @media screen and (max-width: 1000px) {
-    padding: 0 7rem;
-  }
-
-  @media screen and (max-width: 920px) {
-    padding: 0 6rem;
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: 0 5rem;
-  }
-
-  @media screen and (max-width: 600px) {
-    padding: 0 4rem;
-  }
-
-  @media screen and (max-width: 500px) {
-    padding: 0 3rem;
-  }
-
-  @media screen and (max-width: 450px) {
-    padding: 0 2rem;
+  @media screen and (max-width: 640px) {
+    padding: 0 12px;
   }
 
   .logo {
@@ -177,7 +158,7 @@ export const NavbarStyled = styled.section`
     bottom: 40px;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1025px) {
     display: none;
   }
 

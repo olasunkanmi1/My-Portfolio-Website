@@ -13,18 +13,7 @@ const Navbar = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
-
-  // const handleClick = (e) => {
-
-  //   const target = e.target.getAttribute("to")
-  //   const location = document.querySelector(target).offsetTop
-    
-  //   window.scrollTo({
-  //     left: 0,
-  //     top: location - 85,
-  //   })
-  // }
-
+  
   window.addEventListener('scroll', function() {
     let scroll = document.querySelector('.back-to-top')
     scroll.classList.toggle("active" , window.scrollY > 600)

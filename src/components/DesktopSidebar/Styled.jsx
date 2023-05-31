@@ -5,27 +5,45 @@ export const SidebarStyled = styled.section`
   flex-direction: column;
   padding: 10px;
   height: 100%;
+  max-height: 490px;
   width: 120px;
   min-width: 120px;
   overflow-x: hidden;
   overflow-y: scroll;
   border-radius: 5px;
-  margin-right: 50px;
   background: rgba(255, 255, 255, 0.5);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4.5px);
   -webkit-backdrop-filter: blur(4.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  left: calc((100vw - 1024px) / 2);
+  top: calc((100vh - 490px) / 2);
+
+  @media screen and (max-width: 1345px) {
+      left: 10rem;
+  }
+  
+  @media screen and (max-width: 1200px) {
+      left: 8rem;
+  }
 
   .logo {
     width: 100%;
+    height: 100px;
     margin-bottom: 30px;
 
     img {
       /* height: 100%; */
       width: 100%;
     }
+  }
+
+  .scrollspy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   ul {
