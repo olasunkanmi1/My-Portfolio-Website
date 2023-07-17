@@ -35,21 +35,13 @@ export const portfolioData = [
     fade: "fade-right"
   },
   {
-    thumbnail: gmail,
-    name: "gmail inboxpage clone",
-    description: "A static cloned version of Gmail showing the inbox page.",
-    drive: "https://drive.google.com/file/d/1LU6T_Dr0bFePvwZWH9Z9V6jI6u1abi8k/view?usp=share_link",
-    tools: ["HTML", "CSS", "Vanilla JS"],
-    fade: "fade-left"
-  },
-  {
     thumbnail: howbodi,
     name: "MHA tests",
     description:
       "Landing page for a website that help people take mental health assessment tests.",
     link: "https://mhatests.netlify.app/",
     tools: ["React", "Styled-components"],
-    fade: "fade-right"
+    fade: "fade-left"
   },
   {
     thumbnail: sf,
@@ -58,8 +50,16 @@ export const portfolioData = [
       "Landing page for HELP, an application that help users find qualified and reliable local helpers for everything from assembling and installing furniture to moving and cleaning and other everyday tasks.",
     link: "https://servicesfinder.vercel.app/",
     tools: ["Typescript", "Next.js", "Tailwind"],
-    fade: "fade-left"
+    fade: "fade-right"
   },  
+  {
+    thumbnail: gmail,
+    name: "gmail inboxpage clone",
+    description: "A static cloned version of Gmail showing the inbox page.",
+    drive: "https://drive.google.com/file/d/1LU6T_Dr0bFePvwZWH9Z9V6jI6u1abi8k/view?usp=share_link",
+    tools: ["HTML", "CSS", "Vanilla JS"],
+    fade: "fade-left"
+  },
   {
     thumbnail: portfolio,
     name: "portfolio website",
