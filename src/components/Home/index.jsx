@@ -33,7 +33,7 @@ const Home = ({ toggle }) => {
           <div className="animation">
             <div className="line line-left" />
             <a
-              href="mailto:olasunkanmiaq@gmail.com"
+              href="mailto:olasunkanmi.salam22@gmail.com"
               className="btn"
               target="_blank"
               rel="noreferrer"

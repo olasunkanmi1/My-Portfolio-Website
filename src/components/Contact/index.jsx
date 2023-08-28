@@ -104,7 +104,7 @@ const Contact = ({ toggle, setModal }) => {
 
           <div>
             <a
-              href="mailto:olasunkanmiaq@gmail.com"
+              href="mailto:olasunkanmi.salam22@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
@@ -121,7 +121,7 @@ const Contact = ({ toggle, setModal }) => {
               <Linkedin />
             </a>
             <a
-              href="https://wa.me/2349098419054"
+              href="https://wa.me/2349018175157"
               target="_blank"
               rel="noreferrer"
             >

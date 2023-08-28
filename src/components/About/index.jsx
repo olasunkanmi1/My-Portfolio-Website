@@ -30,7 +30,7 @@ const About = ({ toggle }) => {
 
       <div className="buttons">
         <a
-          href="mailto:olasunkanmiaq@gmail.com"
+          href="mailto:olasunkanmi.salam22@gmail.com"
           className="btn mail"
           target="_blank"
           rel="noreferrer"
@@ -38,7 +38,7 @@ const About = ({ toggle }) => {
           Get in touch
         </a>
         <a
-          href="https://drive.google.com/file/d/1XiCCeZZ0fbFdRyM0oY_mxzDSkMgoxoN3/view?usp=sharing"
+          href="https://drive.google.com/file/d/1PcNomTxRZm9BHEMBQHpWCy5f2jhYzP2d/view?usp=sharing"
           className="btn cv"
           target="_blank"
           rel="noreferrer"
